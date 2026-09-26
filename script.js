@@ -1699,6 +1699,9 @@ function shuffle(arr){
 }
 const QUIZ_SET_SIZE = 10;
 
+/* Shared A/B/C/D option lettering, used by both the practice quiz and the timed mock exam. */
+function optLetter(i){ return String.fromCharCode(65 + i); }
+
 /* No-repeat cursor: walks a shuffled order of the whole tier pool and only
    reshuffles (starting a fresh cycle) once every question has been used. */
 function getQuizCycle(tier, poolLen){
@@ -1746,9 +1749,10 @@ function renderQuiz(panel, tier, label){
           <div class="q-block" data-qi="${qi}" data-correct="${q.correct.replace(/"/g,'&quot;')}">
             <div class="q-text">${qi+1}. ${q.text}</div>
             <div class="q-opts">
-              ${q.choices.map((c)=>`
+              ${q.choices.map((c,ci)=>`
                 <label class="q-opt">
                   <input type="radio" name="q${qi}" value="${c.replace(/"/g,'&quot;')}">
+                  <span class="opt-letter">${optLetter(ci)}</span>
                   <span>${c}</span>
                 </label>
               `).join('')}
@@ -2461,9 +2465,10 @@ function renderExamQuestion(){
     <div class="exam-qgrid">${dots}</div>
     <div class="exam-q-text">${current+1}. ${q.text}</div>
     <div class="exam-opts">
-      ${q.choices.map(c=>`
+      ${q.choices.map((c,ci)=>`
         <label class="exam-opt${answers[current]===c ? ' selected':''}">
           <input type="radio" name="examq" value="${c.replace(/"/g,'&quot;')}" ${answers[current]===c?'checked':''}>
+          <span class="opt-letter">${optLetter(ci)}</span>
           <span>${c}</span>
         </label>
       `).join('')}
@@ -2523,15 +2528,31 @@ function submitExam(timeUp){
     </div>
   `;
   const reviewList = document.getElementById('examReviewList');
-  reviewList.innerHTML = questions.map((q,i)=>{
-    const yourAnswer = answers[i] || '(not answered)';
+  reviewList.innerHTML = `<h3 class="exam-review-heading">Review — every question, your answer &amp; the correct answer</h3>` +
+    questions.map((q,i)=>{
     const isCorrect = answers[i] === q.correct;
+    const wasAnswered = answers[i] !== null;
+    const statusLabel = isCorrect ? 'Correct' : (wasAnswered ? 'Incorrect' : 'Not answered');
     const showLogic = q.explain && (q.category === 'maths' || q.category === 'english' || q.category === 'reasoning');
     return `
       <div class="exam-review-item">
         <div class="rq">${i+1}. ${q.text}</div>
-        <div class="ra ${isCorrect ? 'correct' : 'wrong'}">Your answer: ${yourAnswer}</div>
-        ${!isCorrect ? `<div class="ra correct">Correct answer: ${q.correct}</div>` : ''}
+        <div class="ra ${isCorrect ? 'correct' : (wasAnswered ? 'wrong' : '')}">${statusLabel}</div>
+        <div class="q-opts review-opts">
+          ${q.choices.map((c,ci)=>{
+            let cls = 'q-opt review-opt';
+            if (c === q.correct) cls += ' correct';
+            else if (c === answers[i]) cls += ' wrong';
+            return `
+              <div class="${cls}">
+                <span class="opt-letter">${optLetter(ci)}</span>
+                <span>${c}</span>
+                ${c === q.correct ? '<span class="opt-tag">Correct answer</span>' : ''}
+                ${c !== q.correct && c === answers[i] ? '<span class="opt-tag">Your answer</span>' : ''}
+              </div>
+            `;
+          }).join('')}
+        </div>
         ${showLogic ? `<div class="q-explain">${q.explain}</div>` : ''}
       </div>
     `;

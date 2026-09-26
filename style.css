@@ -248,6 +248,15 @@
   .q-opt input{accent-color:#1e88e5;}
   .q-opt.correct{background:#1E3A2A; border-color:#2F7D4F; color:#B7E4C7;}
   .q-opt.wrong{background:#3A211C; border-color:#C1442E; color:#F2B3A5;}
+  .opt-letter{ flex:none; width:22px; height:22px; border-radius:50%; background:#3A3F48; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:11px; }
+  .q-opt.correct .opt-letter{background:#2F7D4F;}
+  .q-opt.wrong .opt-letter{background:#C1442E;}
+  .review-opts{margin-top:10px;}
+  .review-opt{cursor:default; position:relative; flex-wrap:wrap;}
+  .review-opt:hover{border-color:#3A3F48;}
+  .opt-tag{margin-left:auto; font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.03em; padding:2px 8px; border-radius:10px;}
+  .review-opt.correct .opt-tag{background:#2F7D4F; color:#fff;}
+  .review-opt.wrong .opt-tag{background:#C1442E; color:#fff;}
   .quiz-score{ margin-top:14px; background:#1e88e5; color:#fff; padding:14px 16px; border-radius:8px; font-weight:700; text-transform:uppercase; font-size:15px; display:none; }
   .quiz-score.show{display:block;}
   .q-explain{margin-top:10px; background:#20242c; border-left:3px solid #1e88e5; border-radius:4px; padding:9px 12px; font-size:12.8px; line-height:1.6; color:#cfd6e0;}
@@ -416,9 +425,10 @@
   }
   .exam-result-score .big{font-size:38px; font-weight:800;}
   .exam-result-score .sub{font-size:13.5px; opacity:.9; margin-top:4px;}
+  .exam-review-heading{font-size:14px; font-weight:700; color:#fff; margin:0 0 14px;}
   .exam-review-item{border:1px solid #3A3F48; border-radius:8px; padding:14px 16px; margin-bottom:10px;}
   .exam-review-item .rq{font-size:13.5px; font-weight:700; color:#fff; margin-bottom:8px;}
-  .exam-review-item .ra{font-size:12.8px; color:#AEB4BE; margin-bottom:3px;}
+  .exam-review-item .ra{font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.03em; color:#AEB4BE; margin-bottom:3px;}
   .exam-review-item .ra.correct{color:#B7E4C7;}
   .exam-review-item .ra.wrong{color:#F2B3A5;}
   @media (max-width:640px){
