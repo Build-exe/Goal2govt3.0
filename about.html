@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us - Goal2Govt</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Goal2Govt — government exam preparation, previous year question papers, mock tests and exam resources.">
+  <title>Goal2Govt — Government Exam Preparation</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="home-page">
+
 <header>
-  <div class="logo">
+  <a class="logo" href="index.html" aria-label="Goal2Govt Home">
     <img src="logo.png" alt="Goal2Govt" class="logo-img">
-  </div>
-  <nav>
+  </a>
+
+  <nav aria-label="Primary navigation">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="jobsdetails.html">Jobs & Details</a></li>
-      <li><a href="index.html#prep-section">Exam Prep</a></li>
-      <li><a href="mocktest.html">Mock Test</a></li>
-      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="jobsdetails.html">Exams</a></li>
+      <li><a href="#papers">Question Papers</a></li>
+      <li><a href="mocktest.html">Mock Tests</a></li>
+      <li><a href="#updates">Exam Updates</a></li>
+      <li><a href="about.html">About</a></li>
     </ul>
   </nav>
+
   <div class="auth-area" id="authArea">
     <button class="signup-btn" id="signupBtn">Sign Up</button>
     <button class="signin-btn" id="authBtn">Sign In</button>
@@ -29,411 +35,451 @@
   </div>
 </header>
 
-<!-- ============================================================
-     ABOUT US — fully coded page (no uploaded images).
-     All visuals below are plain CSS shapes or inline SVG.
-     ============================================================ -->
+<main>
 
-<section class="ap-hero">
-  <div class="ap-hero-text">
-    <span class="ap-badge">ABOUT US</span>
-    <h1>We are <span class="ap-tag">Team Build.exe</span></h1>
-    <p class="ap-hero-sub">A student-built initiative for every government job aspirant in India.</p>
-    <div class="ap-underline"></div>
-    <p class="ap-lead">
-      Goal2Govt is a platform by Team <strong>"Build.exe"</strong>, dedicated to helping
-      students achieve their government job dreams. We provide mock tests, previous year
-      question papers, career guidance, exam updates, and useful resources to support
-      every aspirant on their journey to success.
-    </p>
-  </div>
-  <div class="ap-hero-visual">
-    <svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
-      <!-- ground + backdrop -->
-      <rect x="0" y="255" width="400" height="8" fill="#dfe9f5"/>
-      <circle cx="330" cy="70" r="46" fill="#eaf3ff"/>
-      <rect x="20" y="30" width="150" height="110" rx="10" fill="#cfe0f5"/>
-      <rect x="36" y="46" width="118" height="8" rx="4" fill="#a9c6e8"/>
-      <rect x="36" y="64" width="90" height="8" rx="4" fill="#a9c6e8"/>
-      <rect x="36" y="82" width="100" height="8" rx="4" fill="#a9c6e8"/>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <span class="hero-kicker">Government Exam Preparation Platform</span>
 
-      <!-- Girl, holding an open book -->
-      <g>
-        <circle cx="150" cy="185" r="22" fill="#f1c39a"/>
-        <path d="M128 178 q22 -34 44 0 l0 -6 q-22 -20 -44 0 z" fill="#3a2a1e"/>
-        <path d="M158 168 q18 6 12 34 l-8 0 q2 -20 -10 -28 z" fill="#3a2a1e"/>
-        <path d="M110 260 q40 -34 80 0 l6 60 q-46 16 -92 0 z" fill="#e8547c"/>
-        <rect x="118" y="215" width="24" height="34" rx="8" fill="#f1c39a" transform="rotate(-18 130 232)"/>
-        <rect x="158" y="215" width="24" height="34" rx="8" fill="#f1c39a" transform="rotate(18 170 232)"/>
-        <g transform="translate(122,222) rotate(-6)">
-          <rect x="0" y="0" width="56" height="40" rx="4" fill="#ffffff" stroke="#1565c0" stroke-width="3"/>
-          <line x1="28" y1="4" x2="28" y2="36" stroke="#1565c0" stroke-width="2"/>
-          <line x1="8" y1="12" x2="22" y2="12" stroke="#a9c6e8" stroke-width="2"/>
-          <line x1="8" y1="20" x2="22" y2="20" stroke="#a9c6e8" stroke-width="2"/>
-          <line x1="34" y1="12" x2="48" y2="12" stroke="#a9c6e8" stroke-width="2"/>
-          <line x1="34" y1="20" x2="48" y2="20" stroke="#a9c6e8" stroke-width="2"/>
-        </g>
-      </g>
+      <h1>Prepare smarter.<br><span>Achieve your goal.</span></h1>
 
-      <!-- Boy, holding a closed book against his chest -->
-      <g>
-        <circle cx="248" cy="190" r="21" fill="#e8b184"/>
-        <path d="M227 186 q21 -30 42 0 q2 -18 -21 -22 q-23 4 -21 22 z" fill="#241c15"/>
-        <path d="M212 258 q36 -30 72 0 l4 58 q-40 14 -80 0 z" fill="#0d3b7a"/>
-        <rect x="222" y="218" width="20" height="30" rx="7" fill="#e8b184" transform="rotate(-14 232 233)"/>
-        <rect x="258" y="218" width="20" height="30" rx="7" fill="#e8b184" transform="rotate(14 268 233)"/>
-        <g transform="translate(226,222)">
-          <rect x="0" y="0" width="46" height="34" rx="3" fill="#ff9933"/>
-          <rect x="4" y="4" width="38" height="26" rx="2" fill="#ffb266"/>
-          <line x1="23" y1="4" x2="23" y2="30" stroke="#c9711f" stroke-width="2"/>
-        </g>
-      </g>
-    </svg>
-  </div>
-</section>
+      <p>
+        Find government exams, practice with mock tests, explore previous year
+        question papers and organize your preparation — all in one place.
+      </p>
 
-<!-- Our Story -->
-<section class="ap-split">
-  <div class="ap-split-text">
-    <h2>Our <span class="ap-tag">Story</span></h2>
-    <div class="ap-underline"></div>
-    <p>Goal2Govt started as a small idea among a group of students who wanted to create a
-      platform that provides all government exam resources in one place. We noticed that
-      many aspirants struggle to find reliable question papers, mock tests, and proper
-      guidance, so we decided to build a simple, useful, and student-friendly website to
-      help them.</p>
-    <p>With the support, encouragement, and guidance from our mentors and well-wishers,
-      this idea slowly turned into Goal2Govt — a platform built by students, for
-      students.</p>
-  </div>
-  <div class="ap-split-visual">
-    <svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="290" cy="60" r="50" fill="#eaf3ff"/>
-      <rect x="20" y="150" width="230" height="70" rx="10" fill="#0d3b7a"/>
-      <rect x="20" y="150" width="115" height="70" rx="10" fill="#1565c0"/>
-      <path d="M135 150 v70" stroke="#0a2c5c" stroke-width="2"/>
-      <line x1="35" y1="165" x2="120" y2="165" stroke="#5aa9e6" stroke-width="3"/>
-      <line x1="35" y1="178" x2="105" y2="178" stroke="#5aa9e6" stroke-width="3"/>
-      <line x1="35" y1="191" x2="115" y2="191" stroke="#5aa9e6" stroke-width="3"/>
-      <line x1="150" y1="165" x2="235" y2="165" stroke="#7fc4ff" stroke-width="3"/>
-      <line x1="150" y1="178" x2="220" y2="178" stroke="#7fc4ff" stroke-width="3"/>
-      <line x1="150" y1="191" x2="230" y2="191" stroke="#7fc4ff" stroke-width="3"/>
-      <rect x="16" y="146" width="238" height="8" rx="4" fill="#2F7D4F"/>
-      <g transform="translate(255,60)">
-        <circle r="34" fill="#fff6d9" stroke="#f4c430" stroke-width="3"/>
-        <path d="M-10 -6 q10 -18 20 0 q3 12 -6 16 l-8 0 q-9 -4 -6 -16 z" fill="#f4c430"/>
-        <rect x="-6" y="12" width="12" height="8" rx="2" fill="#c9a227"/>
-        <line x1="-32" y1="-30" x2="-24" y2="-22" stroke="#f4c430" stroke-width="3" stroke-linecap="round"/>
-        <line x1="32" y1="-30" x2="24" y2="-22" stroke="#f4c430" stroke-width="3" stroke-linecap="round"/>
-        <line x1="0" y1="-42" x2="0" y2="-30" stroke="#f4c430" stroke-width="3" stroke-linecap="round"/>
-      </g>
-      <path d="M40 130 q80 -50 130 -70" stroke="#ff9933" stroke-width="4" fill="none" stroke-dasharray="2 10" stroke-linecap="round"/>
-    </svg>
-  </div>
-</section>
-
-<!-- Our Mission -->
-<section class="ap-split">
-  <div class="ap-split-visual">
-    <svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="150" cy="130" r="95" fill="none" stroke="#d64545" stroke-width="18"/>
-      <circle cx="150" cy="130" r="65" fill="none" stroke="#ffffff" stroke-width="14"/>
-      <circle cx="150" cy="130" r="65" fill="none" stroke="#d64545" stroke-width="4"/>
-      <circle cx="150" cy="130" r="36" fill="none" stroke="#f4c430" stroke-width="14"/>
-      <circle cx="150" cy="130" r="9" fill="#0d3b7a"/>
-      <g transform="translate(150,130) rotate(-38)">
-        <rect x="0" y="-4" width="150" height="8" rx="4" fill="#5b3a24"/>
-        <polygon points="150,-14 178,0 150,14" fill="#5b3a24"/>
-      </g>
-      <g transform="translate(255,60)">
-        <path d="M0 30 L14 0 L28 30 Z" fill="#1565c0"/>
-        <circle cx="14" cy="8" r="6" fill="#eaf3ff"/>
-        <polygon points="0,30 -8,52 14,42" fill="#ff9933"/>
-        <polygon points="28,30 36,52 14,42" fill="#ff9933"/>
-      </g>
-      <rect x="215" y="150" width="120" height="86" rx="10" fill="#fdf6e8" stroke="#e9d9ad" stroke-width="1"/>
-      <text x="275" y="172" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#7a5a1e" text-anchor="middle">Simple</text>
-      <text x="275" y="191" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#7a5a1e" text-anchor="middle">Accessible</text>
-      <text x="275" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#7a5a1e" text-anchor="middle">Effective</text>
-      <text x="275" y="229" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#7a5a1e" text-anchor="middle">For Every Aspirant</text>
-    </svg>
-  </div>
-  <div class="ap-split-text">
-    <h2>Our <span class="ap-tag">Mission</span></h2>
-    <div class="ap-underline"></div>
-    <p>Our mission is to make government exam preparation simple, accessible, and
-      effective for every student in India.</p>
-    <p>We aim to provide high-quality study material, authentic question papers, and
-      guidance so that every aspirant can prepare with confidence and achieve their goals,
-      regardless of their background or location.</p>
-  </div>
-</section>
-
-<!-- Our Vision -->
-<section class="ap-split ap-vision">
-  <div class="ap-split-text">
-    <h2>Our <span class="ap-tag">Vision</span></h2>
-    <div class="ap-underline"></div>
-    <p>To become India's most trusted and student-friendly platform for government exams,
-      helping millions of aspirants turn their dreams into reality with the right
-      resources, guidance, and continuous support.</p>
-    <p>We envision a future where every aspirant, regardless of their background, can
-      access quality resources, stay updated, practice effectively, and move one step
-      closer to a successful career in government service.</p>
-  </div>
-  <div class="ap-split-visual">
-    <svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#2b3a67"/>
-          <stop offset="55%" stop-color="#a85b3f"/>
-          <stop offset="100%" stop-color="#e3a465"/>
-        </linearGradient>
-      </defs>
-      <rect x="0" y="0" width="360" height="260" rx="14" fill="url(#skyGrad)"/>
-      <circle cx="280" cy="60" r="30" fill="#ffd27a"/>
-      <polygon points="0,220 90,110 150,180 210,80 300,190 360,150 360,260 0,260" fill="#1c2440" opacity="0.9"/>
-      <polygon points="150,180 210,80 250,140 190,190" fill="#33406e"/>
-      <polygon points="200,90 210,80 220,95 210,105" fill="#ffffff"/>
-      <g transform="translate(200,150)">
-        <line x1="0" y1="0" x2="0" y2="-46" stroke="#f4f4f4" stroke-width="3"/>
-        <polygon points="0,-46 30,-38 0,-30" fill="#ff9933"/>
-      </g>
-      <path d="M40 235 q60 -20 100 -5 q40 15 90 -10 q40 -20 90 -5" stroke="#ffd27a" stroke-width="3" fill="none" stroke-dasharray="1 10" stroke-linecap="round"/>
-      <g transform="translate(60,205)">
-        <circle r="9" fill="#0d3b7a"/>
-        <rect x="-8" y="10" width="16" height="24" rx="6" fill="#0d3b7a"/>
-      </g>
-      <text x="330" y="30" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="end">One Nation</text>
-      <text x="330" y="46" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffd27a" text-anchor="end">Accessible</text>
-    </svg>
-  </div>
-</section>
-
-<!-- Why Choose Goal2Govt -->
-<section class="ap-why">
-  <h2>Why Choose <span>Goal2Govt?</span></h2>
-  <p class="ap-sub">Everything you need for your government job preparation, in one place.</p>
-  <div class="ap-why-grid">
-    <div class="ap-why-card">
-      <div class="ap-why-icon" style="background:#dff3e6;color:#2F7D4F;">✅</div>
-      <h4>Reliable Information</h4>
-      <p>Authentic and updated content from trusted sources.</p>
-    </div>
-    <div class="ap-why-card">
-      <div class="ap-why-icon" style="background:#ffe6d1;color:#c9711f;">👥</div>
-      <h4>Student Friendly</h4>
-      <p>Simple, clean and easy to use.</p>
-    </div>
-    <div class="ap-why-card">
-      <div class="ap-why-icon" style="background:#ece2ff;color:#7b3fd1;">₹</div>
-      <h4>Completely Free (Initially)</h4>
-      <p>Accessible for every student.</p>
-    </div>
-    <div class="ap-why-card">
-      <div class="ap-why-icon" style="background:#dcebff;color:#1565c0;">📈</div>
-      <h4>Helps in Career Growth</h4>
-      <p>Guidance beyond just exams.</p>
-    </div>
-    <div class="ap-why-card">
-      <div class="ap-why-icon" style="background:#ffe0ec;color:#d1447e;">❤️</div>
-      <h4>Built with Passion</h4>
-      <p>Created by students who understand your needs.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Founder & Idea -->
-<!-- <section class="ap-founder">
-  <h2>Founder <span>&amp; Idea</span></h2>
-  <div class="ap-founder-grid">
-    <div class="ap-founder-card blue">
-      <div class="ap-founder-icon">👤</div>
-      <div>
-        <div class="ap-founder-role">Founder &amp; Developer</div>
-        <div class="ap-founder-name">Nikhil Boddu</div>
-        <p class="ap-founder-desc">Founder of Team Build.exe and developed Goal2Govt.
-          Passionate about technology and creating useful resources for students.</p>
+      <div class="hero-actions">
+        <button class="hero-primary" onclick="window.location.href='jobsdetails.html'">
+          Explore Exams →
+        </button>
+        <button class="hero-secondary" onclick="document.getElementById('papers').scrollIntoView({behavior:'smooth'})">
+          Browse Question Papers
+        </button>
       </div>
     </div>
-    <div class="ap-founder-card peach">
-      <div class="ap-founder-icon">💡</div>
-      <div>
-        <div class="ap-founder-role">A Small Idea From</div>
-        <div class="ap-founder-name">Kodam Ram Prasad</div>
-        <p class="ap-founder-desc">A small idea from Ram Prasad. Always motivating and
-          supporting the team to build something useful for students.</p>
+
+    <div class="hero-visual">
+      <div class="hero-dashboard" aria-label="Goal2Govt preparation dashboard preview">
+        <div class="dash-top">
+          <span class="dash-brand">Goal2Govt</span>
+          <span class="dash-live">● Preparation</span>
+        </div>
+
+        <div class="dash-search">⌕ Search exams, papers, subjects...</div>
+
+        <div class="dash-grid">
+          <div class="dash-card">
+            <div class="dash-icon">▣</div>
+            <strong>Question Papers</strong>
+            <small>Practice previous exams</small>
+          </div>
+          <div class="dash-card">
+            <div class="dash-icon">✓</div>
+            <strong>Mock Tests</strong>
+            <small>Timed exam practice</small>
+          </div>
+          <div class="dash-card">
+            <div class="dash-icon">⌁</div>
+            <strong>Exam Updates</strong>
+            <small>Important information</small>
+          </div>
+          <div class="dash-card">
+            <div class="dash-icon">↗</div>
+            <strong>Progress</strong>
+            <small>Track your preparation</small>
+          </div>
+        </div>
+
+        <div class="dash-progress">
+          <div class="dash-progress-head">
+            <span>Preparation progress</span>
+            <span>72%</span>
+          </div>
+          <div class="progress-bar"><span></span></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Our Team -->
-<!-- <section class="ap-team">
-  <h2>Our <span>Team</span></h2>
-  <p class="ap-sub">We sincerely thank our friends and team members for their constant support, encouragement, and contribution.</p>
-  <div class="ap-team-grid">
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Jagithyala Ruchitha</span></div>
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Mandala Bharath</span></div>
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Sadala Tejapriya</span></div>
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Konda Akshaya</span></div>
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Kodam Nainesh</span></div>
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Chikile Rani</span></div>
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Adepu Manmitha</span></div>
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Samala Rajanandini</span></div>
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Oggu Aishwarya</span></div>
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Nakka Bhavana</span></div>
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Nadimetla Ravali</span></div>
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Kondi Ganesh</span></div>
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Suruvu Harshitha</span></div>
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Gorityala Akshaya</span></div>
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Gadapa Tejashwini</span></div>
-    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Gosikonda Alekhya</span></div>
-  </div>
-</section>  -->
-
-<!-- Mentor thanks -->
-<!-- <section class="ap-mentor">
-  <div class="ap-mentor-box">
-    <div class="ap-mentor-icon">🎓</div>
-    <p>Thanks to <b>John Harrison sir</b> for his valuable guidance, constant
-      encouragement, and support throughout this journey.</p>
-  </div>
-</section> -->
-
-<!-- Thanks to -->
-<section class="ap-thanks">
-  <h2>Thanks To</h2>
-  <div class="ap-thanks-box">
-    <div class="ap-thanks-icon">🙏</div>
-    <p>We would like to express our heartfelt thanks to everyone who has supported,
-      encouraged, and believed in this idea. Your guidance, suggestions, and continuous
-      support motivate us to keep improving Goal2Govt and help more students achieve
-      their goals.</p>
-  </div>
-</section>
-
-<!-- Special Thanks -->
-<section class="ap-special">
-  <h2>Special <span class="ap-tag">Thanks</span></h2>
-  <p class="ap-sub">We extend our special thanks to:</p>
-  <div class="ap-special-row">
-    <div class="ap-special-card">
-      <img src="Lakshya_Technologies_logo.png" alt="Lakshya Technologies" class="ap-special-logo">
-      <div class="ap-special-name">Lakshya Technologies</div>
+  <!-- TRUST / VALUE STRIP -->
+  <div class="trust-strip">
+    <div class="trust-item">
+      <strong>Previous Year Papers</strong>
+      <span>Find papers by exam, year and subject.</span>
     </div>
-    <div class="ap-special-card">
-      <img src="Nethaji_Degree_college_logo.png" alt="Nethaji Degree College" class="ap-special-logo">
-      <div class="ap-special-name">Nethaji Degree College</div>
+    <div class="trust-item">
+      <strong>Timed Mock Tests</strong>
+      <span>Practice under a real exam-style timer.</span>
+    </div>
+    <div class="trust-item">
+      <strong>Exam Resources</strong>
+      <span>Explore eligibility, stages and preparation guidance.</span>
     </div>
   </div>
-</section>
 
-<div class="ap-footer-art">
-  <svg viewBox="0 0 1200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0.0" y="130" width="46.0" height="70" fill="#b9cbe4"/>
-    <rect x="50.0" y="90" width="46.0" height="110" fill="#a7bcdc"/>
-    <rect x="100.0" y="140" width="46.0" height="60" fill="#b9cbe4"/>
-    <rect x="150.0" y="60" width="46.0" height="140" fill="#a7bcdc"/>
-    <rect x="200.0" y="110" width="46.0" height="90" fill="#b9cbe4"/>
-    <rect x="250.0" y="80" width="46.0" height="120" fill="#a7bcdc"/>
-    <rect x="300.0" y="125" width="46.0" height="75" fill="#b9cbe4"/>
-    <rect x="350.0" y="50" width="46.0" height="150" fill="#a7bcdc"/>
-    <rect x="400.0" y="105" width="46.0" height="95" fill="#b9cbe4"/>
-    <rect x="450.0" y="135" width="46.0" height="65" fill="#a7bcdc"/>
-    <rect x="500.0" y="70" width="46.0" height="130" fill="#b9cbe4"/>
-    <rect x="550.0" y="100" width="46.0" height="100" fill="#a7bcdc"/>
-    <rect x="600.0" y="120" width="46.0" height="80" fill="#b9cbe4"/>
-    <rect x="650.0" y="55" width="46.0" height="145" fill="#a7bcdc"/>
-    <rect x="700.0" y="110" width="46.0" height="90" fill="#b9cbe4"/>
-    <rect x="750.0" y="90" width="46.0" height="110" fill="#a7bcdc"/>
-    <rect x="800.0" y="130" width="46.0" height="70" fill="#b9cbe4"/>
-    <rect x="850.0" y="75" width="46.0" height="125" fill="#a7bcdc"/>
-    <rect x="900.0" y="115" width="46.0" height="85" fill="#b9cbe4"/>
-    <rect x="950.0" y="140" width="46.0" height="60" fill="#a7bcdc"/>
-    <rect x="1000.0" y="65" width="46.0" height="135" fill="#b9cbe4"/>
-    <rect x="1050.0" y="105" width="46.0" height="95" fill="#a7bcdc"/>
-    <rect x="1100.0" y="125" width="46.0" height="75" fill="#b9cbe4"/>
-    <rect x="1150.0" y="85" width="46.0" height="115" fill="#a7bcdc"/>
-    <polygon points="560,200 560,90 585,60 610,90 610,200" fill="#8fa8cc"/>
-    <polygon points="620,200 620,90 645,60 670,90 670,200" fill="#8fa8cc"/>
-  </svg>
-</div>
-<div class="ap-tricolor-bar"></div>
+  <!-- EXAMS -->
+  <section class="modern-section">
+    <div class="section-head">
+      <span class="eyebrow">Explore</span>
+      <h2>Find the exam you're preparing for</h2>
+      <p>Start with an exam category and explore the opportunities, preparation resources and practice available on Goal2Govt.</p>
+    </div>
+
+    <div class="exam-grid">
+      <div class="exam-card" onclick="window.location.href='jobsdetails.html'">
+        <div class="exam-logo">SSC</div>
+        <h3>SSC Exams</h3>
+        <p>CGL, CHSL, MTS, GD and other recruitment paths.</p>
+        <span class="exam-link">Explore →</span>
+      </div>
+
+      <div class="exam-card" onclick="window.location.href='jobsdetails.html'">
+        <div class="exam-logo">RRB</div>
+        <h3>Railway Exams</h3>
+        <p>Explore railway roles and qualification-based opportunities.</p>
+        <span class="exam-link">Explore →</span>
+      </div>
+
+      <div class="exam-card" onclick="window.location.href='jobsdetails.html'">
+        <div class="exam-logo">UPSC</div>
+        <h3>UPSC</h3>
+        <p>Explore civil services and other central recruitment routes.</p>
+        <span class="exam-link">Explore →</span>
+      </div>
+
+      <div class="exam-card" onclick="window.location.href='jobsdetails.html'">
+        <div class="exam-logo">BANK</div>
+        <h3>Banking Exams</h3>
+        <p>Explore banking and financial-sector exam pathways.</p>
+        <span class="exam-link">Explore →</span>
+      </div>
+
+      <div class="exam-card" onclick="window.location.href='jobsdetails.html'">
+        <div class="exam-logo">DEF</div>
+        <h3>Defence Exams</h3>
+        <p>Explore defence recruitment and officer-entry routes.</p>
+        <span class="exam-link">Explore →</span>
+      </div>
+
+      <div class="exam-card" onclick="window.location.href='jobsdetails.html'">
+        <div class="exam-logo">PSC</div>
+        <h3>State Exams</h3>
+        <p>Explore state-level government recruitment opportunities.</p>
+        <span class="exam-link">Explore →</span>
+      </div>
+
+      <div class="exam-card" onclick="window.location.href='jobsdetails.html'">
+        <div class="exam-logo">EDU</div>
+        <h3>Teaching</h3>
+        <p>Explore teaching recruitment and qualification routes.</p>
+        <span class="exam-link">Explore →</span>
+      </div>
+
+      <div class="exam-card" onclick="window.location.href='jobsdetails.html'">
+        <div class="exam-logo">POL</div>
+        <h3>Police</h3>
+        <p>Explore police and uniformed-service opportunities.</p>
+        <span class="exam-link">Explore →</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="modern-section soft">
+    <div class="section-head">
+      <span class="eyebrow">Prepare</span>
+      <h2>Everything you need to practice</h2>
+      <p>Goal2Govt brings the preparation journey into a simple, focused experience.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card" id="card-previous-papers">
+        <div class="feature-icon">▣</div>
+        <h3>Previous Year Papers</h3>
+        <p>Practice from organized question-paper resources and use them to understand the style and level of an exam.</p>
+        <a href="#papers">Browse papers →</a>
+      </div>
+
+      <div class="feature-card" onclick="window.location.href='mocktest.html'">
+        <div class="feature-icon">✓</div>
+        <h3>Mock Tests</h3>
+        <p>Take timed practice tests, answer questions under pressure and review your performance.</p>
+        <a href="mocktest.html">Start practicing →</a>
+      </div>
+
+      <div class="feature-card" id="card-career-tips">
+        <div class="feature-icon">✦</div>
+        <h3>Exam Guidance</h3>
+        <p>Explore eligibility, selection stages, preparation guidance and other information connected to government jobs.</p>
+        <a href="jobsdetails.html">Explore details →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUESTION PAPERS -->
+  <section class="modern-section" id="papers">
+    <div class="section-head">
+      <span class="eyebrow">Question Papers</span>
+      <h2>Practice from previous exams</h2>
+      <p>Start building familiarity with exam questions. Your paper library can later be connected directly to the Goal2Govt backend and database.</p>
+    </div>
+
+    <div class="paper-panel">
+      <div class="paper-head">
+        <h3>Popular paper categories</h3>
+        <button onclick="window.location.href='jobsdetails.html'">View all exams →</button>
+      </div>
+
+      <div class="paper-row">
+        <div>
+          <div class="paper-name">SSC CGL</div>
+          <div class="paper-meta">Graduate-level recruitment</div>
+        </div>
+        <span class="paper-badge">Previous Papers</span>
+        <span class="paper-meta">Multiple subjects</span>
+        <button class="paper-action" onclick="window.location.href='jobsdetails.html'">Explore</button>
+      </div>
+
+      <div class="paper-row">
+        <div>
+          <div class="paper-name">RRB NTPC</div>
+          <div class="paper-meta">Railway recruitment</div>
+        </div>
+        <span class="paper-badge">Previous Papers</span>
+        <span class="paper-meta">Multiple subjects</span>
+        <button class="paper-action" onclick="window.location.href='jobsdetails.html'">Explore</button>
+      </div>
+
+      <div class="paper-row">
+        <div>
+          <div class="paper-name">Banking Exams</div>
+          <div class="paper-meta">PO / Clerk pathways</div>
+        </div>
+        <span class="paper-badge">Practice</span>
+        <span class="paper-meta">Aptitude & reasoning</span>
+        <button class="paper-action" onclick="window.location.href='jobsdetails.html'">Explore</button>
+      </div>
+
+      <div class="paper-row">
+        <div>
+          <div class="paper-name">UPSC</div>
+          <div class="paper-meta">Civil services preparation</div>
+        </div>
+        <span class="paper-badge">Resources</span>
+        <span class="paper-meta">Exam preparation</span>
+        <button class="paper-action" onclick="window.location.href='jobsdetails.html'">Explore</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOCK TEST CTA -->
+  <section class="modern-section soft">
+    <div class="mock-banner">
+      <div>
+        <span class="eyebrow" style="color:#9fc3ff">Mock Tests</span>
+        <h2>Practice under exam conditions.</h2>
+        <p>
+          Choose a qualification and exam, select a mock-test set and work through
+          a timed test using the question bank already built into Goal2Govt.
+        </p>
+      </div>
+      <div class="mock-banner-actions">
+        <button onclick="window.location.href='mocktest.html'">Open Mock Tests →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPDATES -->
+  <section class="modern-section" id="updates">
+    <div class="section-head">
+      <span class="eyebrow">Stay Updated</span>
+      <h2>Exam information, in one place</h2>
+      <p>This section is ready for your backend-driven exam updates, notifications and important dates.</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">01</div>
+        <h3>Notifications</h3>
+        <p>Add official recruitment notifications and link users to the relevant source.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">02</div>
+        <h3>Important Dates</h3>
+        <p>Show application, correction, examination and result dates in a structured format.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">03</div>
+        <h3>Exam Changes</h3>
+        <p>Highlight important changes to schedules, patterns or recruitment information.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="modern-section soft">
+    <div class="about-teaser">
+      <div class="about-box">
+        <span class="mini-label">Built by Team Build.exe</span>
+        <h3>Built for government-exam aspirants.</h3>
+        <p>
+          Goal2Govt is a student-built project focused on bringing exam discovery,
+          question-paper practice, mock tests and preparation resources into one
+          simple platform.
+        </p>
+        <br>
+        <button class="hero-secondary" onclick="window.location.href='about.html'">Meet the team →</button>
+      </div>
+
+      <div class="about-list">
+        <div><b>✓</b><span>Organized government-exam resources in one place.</span></div>
+        <div><b>✓</b><span>Practice through previous papers and timed mock tests.</span></div>
+        <div><b>✓</b><span>Qualification-based government job exploration.</span></div>
+        <div><b>✓</b><span>A foundation for a future personalized preparation dashboard.</span></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
 <footer>
-  &copy; 2026 Goal2Govt. Find Your Path to Success.
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <strong>GOAL2GOVT</strong>
+      <p>Your government-exam preparation platform for discovering exams, practicing papers and building consistent preparation.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="jobsdetails.html">Government Exams</a>
+      <a href="#papers">Question Papers</a>
+      <a href="mocktest.html">Mock Tests</a>
+      <a href="#updates">Exam Updates</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Goal2Govt</h4>
+      <a href="about.html">About Team Build.exe</a>
+      <a href="about.html#mission">Our Mission</a>
+      <a href="about.html#vision">Our Vision</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Goal2Govt. All rights reserved.</span>
+    <span>Built by Team Build.exe</span>
+  </div>
 </footer>
 
-<!-- Detail modal: tabbed sheet reused for government jobs, roadmap careers, category overviews and tips -->
-<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
-  <div class="sheet">
-    <div class="sheet-sticky">
-      <div class="sheet-head" id="sheetHead">
-        <button class="close-btn" id="closeBtn" aria-label="Close">✕</button>
-        <span class="code" id="sheetCode"></span>
-        <h2 id="sheetTitle"></h2>
-        <div class="tier-label" id="sheetTier"></div>
+<!-- ============================================================
+     LEGACY HOOKS
+     script.js uses these IDs. They remain in the DOM but are
+     hidden so the existing JS doesn't break.
+     ============================================================ -->
+<div class="legacy-hooks" aria-hidden="true">
+
+  <div id="card-government-jobs"></div>
+  <div id="card-banking-finance"></div>
+  <div id="card-engineering-it"></div>
+  <div id="card-healthcare-careers"></div>
+
+  <button id="btn-software-developer"></button>
+  <button id="btn-civil-services"></button>
+  <button id="btn-nursing-career"></button>
+
+  <div id="card-ebooks"></div>
+
+  <section id="explorer-section">
+    <div id="qualTabs"></div>
+    <div id="jobList"></div>
+  </section>
+
+  <!-- Existing generic detail overlay -->
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet">
+      <div class="sheet-sticky">
+        <div class="sheet-head" id="sheetHead">
+          <button class="close-btn" id="closeBtn" aria-label="Close">✕</button>
+          <span class="code" id="sheetCode"></span>
+          <h2 id="sheetTitle"></h2>
+          <div class="tier-label" id="sheetTier"></div>
+        </div>
+        <div class="section-tabs"></div>
       </div>
-      <div class="section-tabs"></div>
-    </div>
-    <div class="sheet-body"></div>
-  </div>
-</div>
-
-<!-- Auth modal: Sign Up / Log In (client-side demo auth, stored in this browser only) -->
-<div class="overlay" id="authOverlay" role="dialog" aria-modal="true" aria-labelledby="authTitle">
-  <div class="sheet auth-sheet">
-    <button class="close-btn" id="authCloseBtn" aria-label="Close">✕</button>
-    <div class="auth-body">
-      <h2 id="authTitle">Welcome to Goal2Govt</h2>
-      <div class="auth-tabs">
-        <button class="auth-tab-btn active" data-authtab="login">Log In</button>
-        <button class="auth-tab-btn" data-authtab="signup">Sign Up</button>
-      </div>
-
-      <form id="loginForm" class="auth-form">
-        <label>Email</label>
-        <input type="email" id="loginEmail" required autocomplete="email">
-        <label>Password</label>
-        <input type="password" id="loginPassword" required autocomplete="current-password">
-        <p class="auth-error" id="loginError"></p>
-        <button type="submit" class="auth-submit">Log In</button>
-      </form>
-
-      <form id="signupForm" class="auth-form" style="display:none;">
-        <label>Full Name</label>
-        <input type="text" id="signupName" required autocomplete="name">
-        <label>Email</label>
-        <input type="email" id="signupEmail" required autocomplete="email">
-        <label>Password</label>
-        <input type="password" id="signupPassword" required autocomplete="new-password" minlength="6">
-        <label>Confirm Password</label>
-        <input type="password" id="signupConfirm" required autocomplete="new-password" minlength="6">
-        <p class="auth-error" id="signupError"></p>
-        <button type="submit" class="auth-submit">Create Free Account</button>
-      </form>
-
-      <p class="auth-disclaimer">Demo account system — your details are stored only in this browser, not on a server. Don't reuse a real password.</p>
+      <div class="sheet-body"></div>
     </div>
   </div>
-</div>
 
-<!-- Timed mock exam — full screen, separate from the casual practice quiz -->
-<div class="overlay fullscreen" id="examOverlay" role="dialog" aria-modal="true" aria-labelledby="examJobTitle">
-  <div class="sheet exam-sheet">
-    <div class="exam-topbar">
-      <div class="exam-topbar-info">
-        <div class="exam-job-title" id="examJobTitle"></div>
-        <div class="exam-progress" id="examProgress"></div>
+  <!-- Auth -->
+  <div class="overlay" id="authOverlay" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="sheet auth-sheet">
+      <button class="close-btn" id="authCloseBtn" aria-label="Close">✕</button>
+      <div class="auth-body">
+        <h2 id="authTitle">Welcome to Goal2Govt</h2>
+        <div class="auth-tabs">
+          <button class="auth-tab-btn active" data-authtab="login">Log In</button>
+          <button class="auth-tab-btn" data-authtab="signup">Sign Up</button>
+        </div>
+
+        <form id="loginForm" class="auth-form">
+          <label>Email</label>
+          <input type="email" id="loginEmail" required autocomplete="email">
+          <label>Password</label>
+          <input type="password" id="loginPassword" required autocomplete="current-password">
+          <p class="auth-error" id="loginError"></p>
+          <button type="submit" class="auth-submit">Log In</button>
+        </form>
+
+        <form id="signupForm" class="auth-form" style="display:none;">
+          <label>Full Name</label>
+          <input type="text" id="signupName" required autocomplete="name">
+          <label>Email</label>
+          <input type="email" id="signupEmail" required autocomplete="email">
+          <label>Password</label>
+          <input type="password" id="signupPassword" required autocomplete="new-password" minlength="6">
+          <label>Confirm Password</label>
+          <input type="password" id="signupConfirm" required autocomplete="new-password" minlength="6">
+          <p class="auth-error" id="signupError"></p>
+          <button type="submit" class="auth-submit">Create Free Account</button>
+        </form>
+
+        <p class="auth-disclaimer">Demo account system — your details are stored only in this browser, not on a server. Do not reuse a real password.</p>
       </div>
-      <div class="exam-timer" id="examTimer">--:--</div>
-      <button class="close-btn" id="examCloseBtn" aria-label="Close">✕</button>
     </div>
-    <div class="exam-body" id="examBody"></div>
   </div>
+
+  <!-- Mock-test hooks used by script.js -->
+  <div id="mockLocked">
+    <button id="mockSignupCta">Sign Up / Log In</button>
+  </div>
+  <div id="mockUnlocked">
+    <div id="mockWelcome"></div>
+    <select id="mockTierSelect"></select>
+    <select id="mockJobSelect"></select>
+    <div id="mockPatternBox"></div>
+    <div id="mockSetRow"></div>
+  </div>
+
+  <!-- Timed exam overlay -->
+  <div class="overlay fullscreen" id="examOverlay" role="dialog" aria-modal="true" aria-labelledby="examJobTitle">
+    <div class="sheet exam-sheet">
+      <div class="exam-topbar">
+        <div class="exam-topbar-info">
+          <div class="exam-job-title" id="examJobTitle"></div>
+          <div class="exam-progress" id="examProgress"></div>
+        </div>
+        <div class="exam-timer" id="examTimer">--:--</div>
+        <button class="close-btn" id="examCloseBtn" aria-label="Close">✕</button>
+      </div>
+      <div class="exam-body" id="examBody"></div>
+    </div>
+  </div>
+
 </div>
 
 <script src="questions-data.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
