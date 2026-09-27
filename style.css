@@ -689,6 +689,26 @@
   .ap-special-card .ap-special-name{font-size:12.5px;font-weight:700;color:var(--text-dark);text-align:center;}
   .ap-special-logo{max-width:150px;width:100%;height:auto;margin:0 auto 10px;border-radius:8px;object-fit:contain;}
 
+  /* Contact Us */
+  .ap-contact{padding:10px 40px 56px;text-align:center;}
+  .ap-contact h2{font-size:32px;font-weight:800;color:var(--text-dark);}
+  .ap-contact h2 .ap-tag{color:var(--blue);}
+  .ap-contact .ap-sub{font-size:16px;color:var(--text-mid);margin:8px 0 30px;}
+  .ap-contact-card{
+    max-width:420px;margin:0 auto;background:var(--white);border:1px solid var(--border);
+    border-radius:16px;padding:36px 28px;box-shadow:0 10px 30px rgba(13,59,122,0.08);
+  }
+  .ap-contact-icon{
+    width:64px;height:64px;margin:0 auto 18px;border-radius:16px;
+    background:linear-gradient(135deg,var(--blue-mid),var(--blue));
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 18px rgba(21,101,192,0.3);
+  }
+  .ap-contact-icon svg{width:28px;height:28px;}
+  .ap-contact-card h3{font-size:19px;font-weight:800;color:var(--text-dark);margin-bottom:8px;}
+  .ap-contact-email{font-size:16px;color:var(--blue);font-weight:500;word-break:break-word;}
+  .ap-contact-email:hover{text-decoration:underline;}
+
   /* Footer decorative skyline + tricolor wave */
   .ap-footer-art{
     position:relative;height:140px;overflow:hidden;
