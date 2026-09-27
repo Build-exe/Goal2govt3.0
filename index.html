@@ -11,11 +11,11 @@
   <div class="logo">
     <img src="logo.png" alt="Goal2Govt" class="logo-img">
   </div>
-  <nav>
+  <nav id="mainNav">
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="jobsdetails.html">Jobs & Details</a></li>
-      <li><a href="#prep-section">Exam Prep</a></li>
+      <li><a href="examprep.html">Exam Prep</a></li>
       <li><a href="mocktest.html">Mock Test</a></li>
       <li><a href="about.html">About Us</a></li>
     </ul>
@@ -27,13 +27,19 @@
       <button class="user-menu-item" id="logoutBtn">Log Out</button>
     </div>
   </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
 <section class="hero">
   <div class="hero-text">
-    <h1>Find Your Path to Success</h1>
-    <p>Get Personalized Career Roadmaps &amp; Exam Guidance</p>
-    <button class="get-started" onclick="window.location.href='jobsdetails.html'">Get Started</button>
+    <h1>Prepare Smarter. Achieve Your Government Job Goal.</h1>
+    <p>Previous Year Papers • Mock Tests • Exam Updates • Preparation Resources</p>
+    <div class="hero-btn-row">
+      <button class="get-started" onclick="window.location.href='jobsdetails.html'">Explore Exams</button>
+      <button class="get-started secondary" onclick="window.location.href='examprep.html'">Browse Question Papers</button>
+    </div>
   </div>
   <div class="hero-visual">
     <div class="illustration">
@@ -44,109 +50,170 @@
 </section>
 
 <section>
-  <h2 class="section-title">Explore Your Career Options</h2>
-  <div class="options-grid">
+  <h2 class="section-title">Explore Government Jobs</h2>
+  <div class="options-grid single">
     <div class="option-card" id="card-government-jobs">
       <div class="option-icon">🏛️</div>
       <div class="option-body">
         <h3>Government Jobs</h3>
-        <p>Explore by Qualification</p>
+        <p>Explore by Qualification — SSC, Banking, Railway &amp; more</p>
       </div>
       <div class="option-arrow">›</div>
     </div>
-    <div class="option-card" id="card-banking-finance">
-      <div class="option-icon">💼</div>
-      <div class="option-body">
-        <h3>Banking &amp; Finance</h3>
-        <p>Explore Career Roadmaps</p>
+  </div>
+</section>
+
+<section id="prep-section">
+  <h2 class="section-title">Exam Preparation Dashboard</h2>
+  <p class="section-sub">Access previous year papers, study materials, mock tests and important updates to crack your dream government job.</p>
+  <div class="dashboard-grid">
+    <div class="dashboard-card" id="card-previous-papers">
+      <div class="dc-head">
+        <div class="dc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
+        </div>
+        <div class="dc-head-text">
+          <h3>Previous Year Question Papers</h3>
+          <p>Download PDFs of past year papers</p>
+        </div>
       </div>
-      <div class="option-arrow">›</div>
+      <div class="dc-body">
+        <ul>
+          <li>SSC, UPSC, RRB, Banking Papers</li>
+          <li>Subject-wise and Year-wise PDFs</li>
+          <li>Free Download &amp; Easy Access</li>
+        </ul>
+        <button type="button" class="dc-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          View Question Papers
+        </button>
+      </div>
     </div>
-    <div class="option-card" id="card-engineering-it">
-      <div class="option-icon">⚙️</div>
-      <div class="option-body">
-        <h3>Engineering &amp; IT</h3>
-        <p>Career Pathway Overview</p>
+
+    <div class="dashboard-card" id="card-ebooks">
+      <div class="dc-head">
+        <div class="dc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <div class="dc-head-text">
+          <h3>E-Books &amp; Study Material</h3>
+          <p>Essential resources for smart preparation</p>
+        </div>
       </div>
-      <div class="option-arrow">›</div>
+      <div class="dc-body">
+        <ul>
+          <li>Topic-wise Notes &amp; E-Books</li>
+          <li>Syllabus &amp; Exam Pattern</li>
+          <li>Important Topics &amp; Current Affairs</li>
+        </ul>
+        <button type="button" class="dc-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          View Study Material
+        </button>
+      </div>
     </div>
-    <div class="option-card" id="card-healthcare-careers">
-      <div class="option-icon">❤️</div>
-      <div class="option-body">
-        <h3>Healthcare Careers</h3>
-        <p>Explore More Resources</p>
+
+    <div class="dashboard-card" onclick="window.location.href='mocktest.html'">
+      <div class="dc-head">
+        <div class="dc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div class="dc-head-text">
+          <h3>Mock Test &amp; Practice</h3>
+          <p>Test your preparation with mock tests</p>
+        </div>
       </div>
-      <div class="option-arrow">›</div>
+      <div class="dc-body">
+        <ul>
+          <li>Subject-wise Mock Tests</li>
+          <li>Previous Year Based Questions</li>
+          <li>Performance Analysis &amp; Improvement</li>
+        </ul>
+        <button type="button" class="dc-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+          Start Mock Test
+        </button>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="roadmap-section">
   <h2 class="section-title">Your Career Roadmap</h2>
-  <div class="roadmap-grid">
-    <div class="roadmap-card">
-      <div class="roadmap-head">Software Developer</div>
-      <div class="roadmap-body">
+  <p class="section-sub">Explore different government career paths, understand eligibility, skills and step-by-step guidance.</p>
+  <div class="dashboard-grid">
+    <div class="dashboard-card" onclick="window.location.href='jobsdetails.html'">
+      <div class="dc-head">
+        <div class="dc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <div class="dc-head-text">
+          <h3>Job Roles &amp; Details</h3>
+          <p>Explore government job opportunities</p>
+        </div>
+      </div>
+      <div class="dc-body">
         <ul>
-          <li>Overview</li>
-          <li>Skills &amp; Qualifications</li>
-          <li>Steps to Become</li>
+          <li>Job Profiles &amp; Responsibilities</li>
+          <li>Salary, Benefits &amp; Career Growth</li>
+          <li>Department-wise Job Details</li>
         </ul>
-        <button class="view-details" id="btn-software-developer">View Details</button>
+        <button type="button" class="dc-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          View Job Details
+        </button>
       </div>
     </div>
-    <div class="roadmap-card">
-      <div class="roadmap-head">Civil Services</div>
-      <div class="roadmap-body">
-        <ul>
-          <li>Eligibility Criteria</li>
-          <li>Exam Stages</li>
-          <li>Preparation Tips</li>
-        </ul>
-        <button class="view-details" id="btn-civil-services">View Details</button>
-      </div>
-    </div>
-    <div class="roadmap-card">
-      <div class="roadmap-head">Nursing Career</div>
-      <div class="roadmap-body">
-        <ul>
-          <li>Qualifications</li>
-          <li>Certification Exams</li>
-          <li>Career Path</li>
-        </ul>
-        <button class="view-details" id="btn-nursing-career">View Details</button>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="prep-section">
-  <h2 class="section-title">Exam Preparation <span class="link">Dashboard</span></h2>
-  <div class="prep-grid">
-    <div class="prep-card" id="card-previous-papers">
-      <div class="prep-icon">⬇️</div>
-      <div class="prep-body">
-        <h3>Previous Year Papers</h3>
-        <p>PDF Files</p>
+    <div class="dashboard-card" onclick="window.location.href='jobsdetails.html'">
+      <div class="dc-head">
+        <div class="dc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M6 9v6"/><path d="M6 9a9 9 0 0 0 9 9"/></svg>
+        </div>
+        <div class="dc-head-text">
+          <h3>Eligibility &amp; Career Path</h3>
+          <p>Know the requirements and plan your journey</p>
+        </div>
+      </div>
+      <div class="dc-body">
+        <ul>
+          <li>Educational Qualifications</li>
+          <li>Age Limit &amp; Reservation Details</li>
+          <li>Step-by-Step Career Guidance</li>
+        </ul>
+        <button type="button" class="dc-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M6 9v6"/><path d="M6 9a9 9 0 0 0 9 9"/></svg>
+          View Career Path
+        </button>
       </div>
     </div>
-    <div class="prep-card" id="card-ebooks">
-      <div class="prep-icon">📱</div>
-      <div class="prep-body">
-        <h3>E-Books &amp; Guides</h3>
-        <p>Essential Study Guides</p>
+
+    <div class="dashboard-card" id="card-career-tips">
+      <div class="dc-head">
+        <div class="dc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.5.4.8 1 .8 1.7v.6h6.4v-.6c0-.7.3-1.3.8-1.7A7 7 0 0 0 12 2z"/></svg>
+        </div>
+        <div class="dc-head-text">
+          <h3>Tips &amp; Guidance</h3>
+          <p>Expert advice for your government career</p>
+        </div>
       </div>
-    </div>
-    <div class="prep-card" id="card-career-tips">
-      <div class="prep-icon">💡</div>
-      <div class="prep-body">
-        <h3>Career Tips</h3>
-        <p>Expert Advice</p>
+      <div class="dc-body">
+        <ul>
+          <li>Preparation Strategy</li>
+          <li>Time Management Tips</li>
+          <li>Success Stories &amp; Expert Advice</li>
+        </ul>
+        <button type="button" class="dc-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.5.4.8 1 .8 1.7v.6h6.4v-.6c0-.7.3-1.3.8-1.7A7 7 0 0 0 12 2z"/></svg>
+          View Career Tips
+        </button>
       </div>
     </div>
   </div>
 </section>
 <footer>
+
   &copy; 2026 Goal2Govt. Find Your Path to Success.
 </footer>
 

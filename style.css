@@ -56,6 +56,12 @@
     cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,0.15);transition:transform .2s;
   }
   .get-started:hover{transform:translateY(-2px);}
+  .hero-btn-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .get-started.secondary{
+    background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.7);
+    box-shadow:none;
+  }
+  .get-started.secondary:hover{background:rgba(255,255,255,.12);}
   .hero-visual{
     flex:1;min-width:280px;display:flex;justify-content:center;z-index:2;
   }
@@ -78,6 +84,7 @@
   .options-grid{
     display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
   }
+  .options-grid.single{grid-template-columns:1fr;max-width:480px;}
   .option-card{
     background:var(--card-bg);border:1px solid var(--border);border-radius:12px;
     padding:20px;display:flex;align-items:center;gap:14px;cursor:pointer;
@@ -92,41 +99,47 @@
   .option-body p{font-size:12px;color:var(--text-mid);}
   .option-arrow{margin-left:auto;color:var(--blue);font-size:18px;}
 
-  /* Roadmap cards */
-  .roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  /* Roadmap cards — compact style (small, like the old Exam Prep row cards) */
+  .roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
   .roadmap-card{
-    background:var(--card-bg);border:1px solid var(--border);border-radius:14px;
-    overflow:hidden;display:flex;flex-direction:column;
+    background:var(--card-bg);border:1px solid var(--border);border-radius:12px;
+    padding:16px 18px;display:flex;flex-direction:column;gap:4px;
   }
   .roadmap-head{
-    height:70px;background:linear-gradient(120deg,var(--blue-mid),var(--blue-light));
-    display:flex;align-items:center;padding:0 18px;color:#fff;font-weight:700;font-size:16px;
+    height:auto;background:none;color:var(--text-dark);
+    padding:0;font-weight:700;font-size:15px;
   }
-  .roadmap-body{padding:18px;flex:1;display:flex;flex-direction:column;}
-  .roadmap-body ul{list-style:none;margin-bottom:18px;}
-  .roadmap-body li{font-size:14px;color:var(--text-mid);padding:5px 0;padding-left:16px;position:relative;}
+  .roadmap-head::before{content:"🎯 ";}
+  .roadmap-body{padding:0;flex:none;display:flex;flex-direction:column;}
+  .roadmap-body ul{list-style:none;margin-bottom:10px;}
+  .roadmap-body li{font-size:12px;color:var(--text-mid);padding:2px 0;padding-left:14px;position:relative;}
   .roadmap-body li::before{content:"•";color:var(--blue);position:absolute;left:0;}
+  .roadmap-body li:nth-child(n+2){display:none;}
   .view-details{
-    margin-top:auto;background:var(--blue-dark);color:#fff;border:none;
-    padding:10px 0;border-radius:8px;font-weight:600;font-size:14px;cursor:pointer;
+    margin-top:0;background:var(--blue-dark);color:#fff;border:none;
+    padding:8px 0;border-radius:8px;font-weight:600;font-size:12.5px;cursor:pointer;
     transition:background .2s;
   }
   .view-details:hover{background:var(--blue);}
 
-  /* Exam prep */
-  .prep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  /* Exam prep — big style (large, like the old Career Roadmap cards) */
+  .prep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
   .prep-card{
-    background:var(--card-bg);border:1px solid var(--border);border-radius:12px;
-    padding:20px;display:flex;align-items:center;gap:14px;cursor:pointer;
+    background:var(--card-bg);border:1px solid var(--border);border-radius:14px;
+    overflow:hidden;display:flex;flex-direction:column;padding:0;gap:0;cursor:pointer;
     transition:box-shadow .2s, transform .2s;
   }
   .prep-card:hover{box-shadow:0 8px 20px rgba(13,59,122,0.12);transform:translateY(-2px);}
   .prep-icon{
-    width:42px;height:42px;border-radius:10px;background:var(--blue-mid);
-    display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;flex-shrink:0;
+    width:100%;height:70px;border-radius:0;
+    background:linear-gradient(120deg,var(--blue-mid),var(--blue-light));
+    display:flex;align-items:center;justify-content:flex-start;
+    color:#fff;font-size:26px;padding:0 18px;flex-shrink:0;
   }
-  .prep-body h3{font-size:15px;font-weight:700;}
-  .prep-body p{font-size:12px;color:var(--text-mid);}
+  .prep-body{padding:18px;flex:1;}
+  .prep-body h3{font-size:17px;font-weight:800;margin-bottom:6px;}
+  .prep-body p{font-size:13.5px;color:var(--text-mid);}
+
 
   /* Government Jobs Explorer (built from flow-chart data) */
   .explorer{
@@ -294,13 +307,49 @@
     .page-banner{padding:32px 20px 36px;}
   }
 
+  /* ===== Mobile nav toggle (hamburger) ===== */
+  .nav-toggle{
+    display:none;
+    flex-direction:column;justify-content:center;align-items:flex-end;gap:5px;
+    width:38px;height:38px;background:none;border:none;cursor:pointer;padding:0;
+    flex-shrink:0;
+  }
+  .nav-toggle span{
+    display:block;width:24px;height:2.5px;background:var(--text-dark);border-radius:2px;
+    transition:transform .2s ease, opacity .2s ease;
+  }
+  .nav-toggle.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
+  .nav-toggle.open span:nth-child(2){opacity:0;}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);}
+
   @media (max-width:900px){
     .options-grid{grid-template-columns:repeat(2,1fr);}
+    .options-grid.single{grid-template-columns:1fr;}
     .roadmap-grid,.prep-grid{grid-template-columns:1fr;}
-    nav{display:none;}
-    header{padding:14px 20px;}
+    header{padding:14px 20px;flex-wrap:wrap;position:relative;justify-content:flex-start;}
+    .logo{order:1;}
+    .auth-area{order:2;margin-left:auto;gap:6px;}
+    .nav-toggle{order:3;display:flex;margin-left:8px;}
+    .signup-btn,.signin-btn{padding:8px 14px;font-size:13px;}
+    nav{
+      order:4;
+      display:block;position:absolute;top:100%;left:0;width:100%;
+      background:var(--white);border-top:1px solid var(--border);
+      box-shadow:0 14px 28px rgba(13,59,122,0.14);
+      max-height:0;overflow:hidden;opacity:0;
+      transition:max-height .25s ease, opacity .2s ease;
+      z-index:49;
+    }
+    nav.open{max-height:420px;opacity:1;}
+    nav ul{flex-direction:column;gap:0;padding:6px 20px 14px;}
+    nav li{width:100%;}
+    nav a{display:block;padding:13px 0;border-bottom:1px solid var(--border);}
+    nav a.active{border-bottom:2px solid var(--blue);}
     .hero{padding:44px 20px 60px;}
     section{padding:40px 20px;}
+  }
+  @media (max-width:420px){
+    .signup-btn{display:none;}
   }
 
   /* ===== Auth area (header) ===== */
