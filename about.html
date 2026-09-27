@@ -3,23 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Goal2Govt - Find Your Path to Success</title>
+<title>About Us - Goal2Govt</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
   <div class="logo">
     <img src="logo.png" alt="Goal2Govt" class="logo-img">
   </div>
   <nav>
     <ul>
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#roadmap-section">Roadmaps</a></li>
-      <li><a href="#prep-section">Exam Prep</a></li>
-      <li><a href="#mockexam-section">Mock Test</a></li>
-      <li><a href="#explorer-section">Jobs &amp; Details</a></li>
-      <li><a href="about.html">About Us</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="jobsdetails.html">Jobs & Details</a></li>
+      <li><a href="index.html#prep-section">Exam Prep</a></li>
+      <li><a href="mocktest.html">Mock Test</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
     </ul>
   </nav>
   <div class="auth-area" id="authArea">
@@ -31,184 +29,337 @@
   </div>
 </header>
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>Find Your Path to Success</h1>
-    <p>Get Personalized Career Roadmaps &amp; Exam Guidance</p>
-    <button class="get-started" onclick="document.getElementById('explorer-section').scrollIntoView({behavior:'smooth'})">Get Started</button>
+<!-- ============================================================
+     ABOUT US — fully coded page (no uploaded images).
+     All visuals below are plain CSS shapes or inline SVG.
+     ============================================================ -->
+
+<section class="ap-hero">
+  <div class="ap-hero-text">
+    <span class="ap-badge">ABOUT US</span>
+    <h1>We are <span class="ap-tag">Team Build.exe</span></h1>
+    <p class="ap-hero-sub">A student-built initiative for every government job aspirant in India.</p>
+    <div class="ap-underline"></div>
+    <p class="ap-lead">
+      Goal2Govt is a platform by Team <strong>"Build.exe"</strong>, dedicated to helping
+      students achieve their government job dreams. We provide mock tests, previous year
+      question papers, career guidance, exam updates, and useful resources to support
+      every aspirant on their journey to success.
+    </p>
   </div>
-  <div class="hero-visual">
-    <div class="illustration">
-      Personalized guidance for every qualification level — from 10th pass to B.Tech
-      <span class="illustration-sub">It is a student build platform</span>
+  <div class="ap-hero-visual">
+    <svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+      <!-- ground + backdrop -->
+      <rect x="0" y="255" width="400" height="8" fill="#dfe9f5"/>
+      <circle cx="330" cy="70" r="46" fill="#eaf3ff"/>
+      <rect x="20" y="30" width="150" height="110" rx="10" fill="#cfe0f5"/>
+      <rect x="36" y="46" width="118" height="8" rx="4" fill="#a9c6e8"/>
+      <rect x="36" y="64" width="90" height="8" rx="4" fill="#a9c6e8"/>
+      <rect x="36" y="82" width="100" height="8" rx="4" fill="#a9c6e8"/>
+
+      <!-- Girl, holding an open book -->
+      <g>
+        <circle cx="150" cy="185" r="22" fill="#f1c39a"/>
+        <path d="M128 178 q22 -34 44 0 l0 -6 q-22 -20 -44 0 z" fill="#3a2a1e"/>
+        <path d="M158 168 q18 6 12 34 l-8 0 q2 -20 -10 -28 z" fill="#3a2a1e"/>
+        <path d="M110 260 q40 -34 80 0 l6 60 q-46 16 -92 0 z" fill="#e8547c"/>
+        <rect x="118" y="215" width="24" height="34" rx="8" fill="#f1c39a" transform="rotate(-18 130 232)"/>
+        <rect x="158" y="215" width="24" height="34" rx="8" fill="#f1c39a" transform="rotate(18 170 232)"/>
+        <g transform="translate(122,222) rotate(-6)">
+          <rect x="0" y="0" width="56" height="40" rx="4" fill="#ffffff" stroke="#1565c0" stroke-width="3"/>
+          <line x1="28" y1="4" x2="28" y2="36" stroke="#1565c0" stroke-width="2"/>
+          <line x1="8" y1="12" x2="22" y2="12" stroke="#a9c6e8" stroke-width="2"/>
+          <line x1="8" y1="20" x2="22" y2="20" stroke="#a9c6e8" stroke-width="2"/>
+          <line x1="34" y1="12" x2="48" y2="12" stroke="#a9c6e8" stroke-width="2"/>
+          <line x1="34" y1="20" x2="48" y2="20" stroke="#a9c6e8" stroke-width="2"/>
+        </g>
+      </g>
+
+      <!-- Boy, holding a closed book against his chest -->
+      <g>
+        <circle cx="248" cy="190" r="21" fill="#e8b184"/>
+        <path d="M227 186 q21 -30 42 0 q2 -18 -21 -22 q-23 4 -21 22 z" fill="#241c15"/>
+        <path d="M212 258 q36 -30 72 0 l4 58 q-40 14 -80 0 z" fill="#0d3b7a"/>
+        <rect x="222" y="218" width="20" height="30" rx="7" fill="#e8b184" transform="rotate(-14 232 233)"/>
+        <rect x="258" y="218" width="20" height="30" rx="7" fill="#e8b184" transform="rotate(14 268 233)"/>
+        <g transform="translate(226,222)">
+          <rect x="0" y="0" width="46" height="34" rx="3" fill="#ff9933"/>
+          <rect x="4" y="4" width="38" height="26" rx="2" fill="#ffb266"/>
+          <line x1="23" y1="4" x2="23" y2="30" stroke="#c9711f" stroke-width="2"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- Our Story -->
+<section class="ap-split">
+  <div class="ap-split-text">
+    <h2>Our <span class="ap-tag">Story</span></h2>
+    <div class="ap-underline"></div>
+    <p>Goal2Govt started as a small idea among a group of students who wanted to create a
+      platform that provides all government exam resources in one place. We noticed that
+      many aspirants struggle to find reliable question papers, mock tests, and proper
+      guidance, so we decided to build a simple, useful, and student-friendly website to
+      help them.</p>
+    <p>With the support, encouragement, and guidance from our mentors and well-wishers,
+      this idea slowly turned into Goal2Govt — a platform built by students, for
+      students.</p>
+  </div>
+  <div class="ap-split-visual">
+    <svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="290" cy="60" r="50" fill="#eaf3ff"/>
+      <rect x="20" y="150" width="230" height="70" rx="10" fill="#0d3b7a"/>
+      <rect x="20" y="150" width="115" height="70" rx="10" fill="#1565c0"/>
+      <path d="M135 150 v70" stroke="#0a2c5c" stroke-width="2"/>
+      <line x1="35" y1="165" x2="120" y2="165" stroke="#5aa9e6" stroke-width="3"/>
+      <line x1="35" y1="178" x2="105" y2="178" stroke="#5aa9e6" stroke-width="3"/>
+      <line x1="35" y1="191" x2="115" y2="191" stroke="#5aa9e6" stroke-width="3"/>
+      <line x1="150" y1="165" x2="235" y2="165" stroke="#7fc4ff" stroke-width="3"/>
+      <line x1="150" y1="178" x2="220" y2="178" stroke="#7fc4ff" stroke-width="3"/>
+      <line x1="150" y1="191" x2="230" y2="191" stroke="#7fc4ff" stroke-width="3"/>
+      <rect x="16" y="146" width="238" height="8" rx="4" fill="#2F7D4F"/>
+      <g transform="translate(255,60)">
+        <circle r="34" fill="#fff6d9" stroke="#f4c430" stroke-width="3"/>
+        <path d="M-10 -6 q10 -18 20 0 q3 12 -6 16 l-8 0 q-9 -4 -6 -16 z" fill="#f4c430"/>
+        <rect x="-6" y="12" width="12" height="8" rx="2" fill="#c9a227"/>
+        <line x1="-32" y1="-30" x2="-24" y2="-22" stroke="#f4c430" stroke-width="3" stroke-linecap="round"/>
+        <line x1="32" y1="-30" x2="24" y2="-22" stroke="#f4c430" stroke-width="3" stroke-linecap="round"/>
+        <line x1="0" y1="-42" x2="0" y2="-30" stroke="#f4c430" stroke-width="3" stroke-linecap="round"/>
+      </g>
+      <path d="M40 130 q80 -50 130 -70" stroke="#ff9933" stroke-width="4" fill="none" stroke-dasharray="2 10" stroke-linecap="round"/>
+    </svg>
+  </div>
+</section>
+
+<!-- Our Mission -->
+<section class="ap-split">
+  <div class="ap-split-visual">
+    <svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="150" cy="130" r="95" fill="none" stroke="#d64545" stroke-width="18"/>
+      <circle cx="150" cy="130" r="65" fill="none" stroke="#ffffff" stroke-width="14"/>
+      <circle cx="150" cy="130" r="65" fill="none" stroke="#d64545" stroke-width="4"/>
+      <circle cx="150" cy="130" r="36" fill="none" stroke="#f4c430" stroke-width="14"/>
+      <circle cx="150" cy="130" r="9" fill="#0d3b7a"/>
+      <g transform="translate(150,130) rotate(-38)">
+        <rect x="0" y="-4" width="150" height="8" rx="4" fill="#5b3a24"/>
+        <polygon points="150,-14 178,0 150,14" fill="#5b3a24"/>
+      </g>
+      <g transform="translate(255,60)">
+        <path d="M0 30 L14 0 L28 30 Z" fill="#1565c0"/>
+        <circle cx="14" cy="8" r="6" fill="#eaf3ff"/>
+        <polygon points="0,30 -8,52 14,42" fill="#ff9933"/>
+        <polygon points="28,30 36,52 14,42" fill="#ff9933"/>
+      </g>
+      <rect x="215" y="150" width="120" height="86" rx="10" fill="#fdf6e8" stroke="#e9d9ad" stroke-width="1"/>
+      <text x="275" y="172" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#7a5a1e" text-anchor="middle">Simple</text>
+      <text x="275" y="191" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#7a5a1e" text-anchor="middle">Accessible</text>
+      <text x="275" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#7a5a1e" text-anchor="middle">Effective</text>
+      <text x="275" y="229" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#7a5a1e" text-anchor="middle">For Every Aspirant</text>
+    </svg>
+  </div>
+  <div class="ap-split-text">
+    <h2>Our <span class="ap-tag">Mission</span></h2>
+    <div class="ap-underline"></div>
+    <p>Our mission is to make government exam preparation simple, accessible, and
+      effective for every student in India.</p>
+    <p>We aim to provide high-quality study material, authentic question papers, and
+      guidance so that every aspirant can prepare with confidence and achieve their goals,
+      regardless of their background or location.</p>
+  </div>
+</section>
+
+<!-- Our Vision -->
+<section class="ap-split ap-vision">
+  <div class="ap-split-text">
+    <h2>Our <span class="ap-tag">Vision</span></h2>
+    <div class="ap-underline"></div>
+    <p>To become India's most trusted and student-friendly platform for government exams,
+      helping millions of aspirants turn their dreams into reality with the right
+      resources, guidance, and continuous support.</p>
+    <p>We envision a future where every aspirant, regardless of their background, can
+      access quality resources, stay updated, practice effectively, and move one step
+      closer to a successful career in government service.</p>
+  </div>
+  <div class="ap-split-visual">
+    <svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2b3a67"/>
+          <stop offset="55%" stop-color="#a85b3f"/>
+          <stop offset="100%" stop-color="#e3a465"/>
+        </linearGradient>
+      </defs>
+      <rect x="0" y="0" width="360" height="260" rx="14" fill="url(#skyGrad)"/>
+      <circle cx="280" cy="60" r="30" fill="#ffd27a"/>
+      <polygon points="0,220 90,110 150,180 210,80 300,190 360,150 360,260 0,260" fill="#1c2440" opacity="0.9"/>
+      <polygon points="150,180 210,80 250,140 190,190" fill="#33406e"/>
+      <polygon points="200,90 210,80 220,95 210,105" fill="#ffffff"/>
+      <g transform="translate(200,150)">
+        <line x1="0" y1="0" x2="0" y2="-46" stroke="#f4f4f4" stroke-width="3"/>
+        <polygon points="0,-46 30,-38 0,-30" fill="#ff9933"/>
+      </g>
+      <path d="M40 235 q60 -20 100 -5 q40 15 90 -10 q40 -20 90 -5" stroke="#ffd27a" stroke-width="3" fill="none" stroke-dasharray="1 10" stroke-linecap="round"/>
+      <g transform="translate(60,205)">
+        <circle r="9" fill="#0d3b7a"/>
+        <rect x="-8" y="10" width="16" height="24" rx="6" fill="#0d3b7a"/>
+      </g>
+      <text x="330" y="30" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="end">One Nation</text>
+      <text x="330" y="46" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffd27a" text-anchor="end">Accessible</text>
+    </svg>
+  </div>
+</section>
+
+<!-- Why Choose Goal2Govt -->
+<section class="ap-why">
+  <h2>Why Choose <span>Goal2Govt?</span></h2>
+  <p class="ap-sub">Everything you need for your government job preparation, in one place.</p>
+  <div class="ap-why-grid">
+    <div class="ap-why-card">
+      <div class="ap-why-icon" style="background:#dff3e6;color:#2F7D4F;">✅</div>
+      <h4>Reliable Information</h4>
+      <p>Authentic and updated content from trusted sources.</p>
+    </div>
+    <div class="ap-why-card">
+      <div class="ap-why-icon" style="background:#ffe6d1;color:#c9711f;">👥</div>
+      <h4>Student Friendly</h4>
+      <p>Simple, clean and easy to use.</p>
+    </div>
+    <div class="ap-why-card">
+      <div class="ap-why-icon" style="background:#ece2ff;color:#7b3fd1;">₹</div>
+      <h4>Completely Free (Initially)</h4>
+      <p>Accessible for every student.</p>
+    </div>
+    <div class="ap-why-card">
+      <div class="ap-why-icon" style="background:#dcebff;color:#1565c0;">📈</div>
+      <h4>Helps in Career Growth</h4>
+      <p>Guidance beyond just exams.</p>
+    </div>
+    <div class="ap-why-card">
+      <div class="ap-why-icon" style="background:#ffe0ec;color:#d1447e;">❤️</div>
+      <h4>Built with Passion</h4>
+      <p>Created by students who understand your needs.</p>
     </div>
   </div>
 </section>
 
-<section>
-  <h2 class="section-title">Explore Your Career Options</h2>
-  <div class="options-grid">
-    <div class="option-card" id="card-government-jobs">
-      <div class="option-icon">🏛️</div>
-      <div class="option-body">
-        <h3>Government Jobs</h3>
-        <p>Explore by Qualification</p>
-      </div>
-      <div class="option-arrow">›</div>
-    </div>
-    <div class="option-card" id="card-banking-finance">
-      <div class="option-icon">💼</div>
-      <div class="option-body">
-        <h3>Banking &amp; Finance</h3>
-        <p>Explore Career Roadmaps</p>
-      </div>
-      <div class="option-arrow">›</div>
-    </div>
-    <div class="option-card" id="card-engineering-it">
-      <div class="option-icon">⚙️</div>
-      <div class="option-body">
-        <h3>Engineering &amp; IT</h3>
-        <p>Career Pathway Overview</p>
-      </div>
-      <div class="option-arrow">›</div>
-    </div>
-    <div class="option-card" id="card-healthcare-careers">
-      <div class="option-icon">❤️</div>
-      <div class="option-body">
-        <h3>Healthcare Careers</h3>
-        <p>Explore More Resources</p>
-      </div>
-      <div class="option-arrow">›</div>
-    </div>
-  </div>
-</section>
-
-<section id="roadmap-section">
-  <h2 class="section-title">Your Career Roadmap</h2>
-  <div class="roadmap-grid">
-    <div class="roadmap-card">
-      <div class="roadmap-head">Software Developer</div>
-      <div class="roadmap-body">
-        <ul>
-          <li>Overview</li>
-          <li>Skills &amp; Qualifications</li>
-          <li>Steps to Become</li>
-        </ul>
-        <button class="view-details" id="btn-software-developer">View Details</button>
+<!-- Founder & Idea -->
+<section class="ap-founder">
+  <h2>Founder <span>&amp; Idea</span></h2>
+  <div class="ap-founder-grid">
+    <div class="ap-founder-card blue">
+      <div class="ap-founder-icon">👤</div>
+      <div>
+        <div class="ap-founder-role">Founder &amp; Developer</div>
+        <div class="ap-founder-name">Nikhil Boddu</div>
+        <p class="ap-founder-desc">Founder of Team Build.exe and developed Goal2Govt.
+          Passionate about technology and creating useful resources for students.</p>
       </div>
     </div>
-    <div class="roadmap-card">
-      <div class="roadmap-head">Civil Services</div>
-      <div class="roadmap-body">
-        <ul>
-          <li>Eligibility Criteria</li>
-          <li>Exam Stages</li>
-          <li>Preparation Tips</li>
-        </ul>
-        <button class="view-details" id="btn-civil-services">View Details</button>
-      </div>
-    </div>
-    <div class="roadmap-card">
-      <div class="roadmap-head">Nursing Career</div>
-      <div class="roadmap-body">
-        <ul>
-          <li>Qualifications</li>
-          <li>Certification Exams</li>
-          <li>Career Path</li>
-        </ul>
-        <button class="view-details" id="btn-nursing-career">View Details</button>
+    <div class="ap-founder-card peach">
+      <div class="ap-founder-icon">💡</div>
+      <div>
+        <div class="ap-founder-role">A Small Idea From</div>
+        <div class="ap-founder-name">Kodam Ram Prasad</div>
+        <p class="ap-founder-desc">A small idea from Ram Prasad. Always motivating and
+          supporting the team to build something useful for students.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Interactive explorer built from the "Government Jobs After 10th, 12th, ITI, Diploma, Degree & BTech" flow chart -->
-<section id="explorer-section">
-  <h2 class="section-title">Government Jobs by Qualification</h2>
-  <div class="explorer">
-    <h2>What is your qualification?</h2>
-    <p>Select your qualification level to see matching government job opportunities.</p>
-    <div class="qual-tabs" id="qualTabs"></div>
-    <div class="job-list" id="jobList"></div>
-    <div class="explorer-footer">
-      <div class="col">
-        <h4>Benefits</h4>
-        <ul>
-          <li>Job Security</li>
-          <li>Good Salary</li>
-          <li>Allowances</li>
-          <li>Pension &amp; Other Perks</li>
-          <li>Respect in Society</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h4>Tips</h4>
-        <ul>
-          <li>Check Notifications Regularly</li>
-          <li>Prepare Well</li>
-          <li>Stay Updated</li>
-          <li>Never Give Up</li>
-        </ul>
-      </div>
+<!-- Our Team -->
+<section class="ap-team">
+  <h2>Our <span>Team</span></h2>
+  <p class="ap-sub">We sincerely thank our friends and team members for their constant support, encouragement, and contribution.</p>
+  <div class="ap-team-grid">
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Jagithyala Ruchitha</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Mandala Bharath</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Sadala Tejapriya</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Konda Akshaya</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Kodam Nainesh</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Chikile Rani</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Adepu Manmitha</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Samala Rajanandini</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Oggu Aishwarya</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Nakka Bhavana</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Nadimetla Ravali</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Kondi Ganesh</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Suruvu Harshitha</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Gorityala Akshaya</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Gadapa Tejashwini</span></div>
+    <div class="ap-team-item"><span class="ap-team-icon">👤</span><span>Gosikonda Alekhya</span></div>
+  </div>
+</section>
+
+<!-- Mentor thanks -->
+<section class="ap-mentor">
+  <div class="ap-mentor-box">
+    <div class="ap-mentor-icon">🎓</div>
+    <p>Thanks to <b>John Harrison sir</b> for his valuable guidance, constant
+      encouragement, and support throughout this journey.</p>
+  </div>
+</section>
+
+<!-- Thanks to -->
+<section class="ap-thanks">
+  <h2>Thanks To</h2>
+  <div class="ap-thanks-box">
+    <div class="ap-thanks-icon">🙏</div>
+    <p>We would like to express our heartfelt thanks to everyone who has supported,
+      encouraged, and believed in this idea. Your guidance, suggestions, and continuous
+      support motivate us to keep improving Goal2Govt and help more students achieve
+      their goals.</p>
+  </div>
+</section>
+
+<!-- Special Thanks -->
+<section class="ap-special">
+  <h2>Special <span class="ap-tag">Thanks</span></h2>
+  <p class="ap-sub">We extend our special thanks to:</p>
+  <div class="ap-special-row">
+    <div class="ap-special-card">
+      <img src="Lakshya_Technologies_logo.png" alt="Lakshya Technologies" class="ap-special-logo">
+      <div class="ap-special-name">Lakshya Technologies</div>
+    </div>
+    <div class="ap-special-card">
+      <img src="Nethaji_Degree_college_logo.png" alt="Nethaji Degree College" class="ap-special-logo">
+      <div class="ap-special-name">Nethaji Degree College</div>
     </div>
   </div>
 </section>
 
-<section id="prep-section">
-  <h2 class="section-title">Exam Preparation <span class="link">Dashboard</span></h2>
-  <div class="prep-grid">
-    <div class="prep-card" id="card-previous-papers">
-      <div class="prep-icon">⬇️</div>
-      <div class="prep-body">
-        <h3>Previous Year Papers</h3>
-        <p>PDF Files</p>
-      </div>
-    </div>
-    <div class="prep-card" id="card-ebooks">
-      <div class="prep-icon">📱</div>
-      <div class="prep-body">
-        <h3>E-Books &amp; Guides</h3>
-        <p>Essential Study Guides</p>
-      </div>
-    </div>
-    <div class="prep-card" id="card-career-tips">
-      <div class="prep-icon">💡</div>
-      <div class="prep-body">
-        <h3>Career Tips</h3>
-        <p>Expert Advice</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="mockexam-section">
-  <h2 class="section-title">Timed Mock Exam <span class="link">Sign-Up Members Only</span></h2>
-
-  <div class="mock-panel" id="mockLocked">
-    <div class="mock-lock-icon">🔒</div>
-    <h3>Sign up free to attend a real-time timed mock exam</h3>
-    <p>Guests can browse every job, roadmap and the casual practice quiz for free. A full timed mock exam — matching the question count and duration of the real exam pattern — is available once you create a free account.</p>
-    <button class="mock-cta" id="mockSignupCta">Sign Up / Log In</button>
-  </div>
-
-  <div class="mock-panel mock-panel-active" id="mockUnlocked" style="display:none;">
-    <p class="mock-welcome" id="mockWelcome"></p>
-    <div class="mock-select-row">
-      <div class="mock-field">
-        <label for="mockTierSelect">Qualification</label>
-        <select id="mockTierSelect"></select>
-      </div>
-      <div class="mock-field">
-        <label for="mockJobSelect">Exam / Job Role</label>
-        <select id="mockJobSelect"></select>
-      </div>
-    </div>
-    <div class="mock-pattern-box" id="mockPatternBox"></div>
-    <p class="mock-set-intro">Pick any set below — each one is a distinct, repeatable mock test (same question count and time limit as the real exam pattern above).</p>
-    <div class="mock-set-row" id="mockSetRow"></div>
-  </div>
-</section>
-
+<div class="ap-footer-art">
+  <svg viewBox="0 0 1200 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0.0" y="130" width="46.0" height="70" fill="#b9cbe4"/>
+    <rect x="50.0" y="90" width="46.0" height="110" fill="#a7bcdc"/>
+    <rect x="100.0" y="140" width="46.0" height="60" fill="#b9cbe4"/>
+    <rect x="150.0" y="60" width="46.0" height="140" fill="#a7bcdc"/>
+    <rect x="200.0" y="110" width="46.0" height="90" fill="#b9cbe4"/>
+    <rect x="250.0" y="80" width="46.0" height="120" fill="#a7bcdc"/>
+    <rect x="300.0" y="125" width="46.0" height="75" fill="#b9cbe4"/>
+    <rect x="350.0" y="50" width="46.0" height="150" fill="#a7bcdc"/>
+    <rect x="400.0" y="105" width="46.0" height="95" fill="#b9cbe4"/>
+    <rect x="450.0" y="135" width="46.0" height="65" fill="#a7bcdc"/>
+    <rect x="500.0" y="70" width="46.0" height="130" fill="#b9cbe4"/>
+    <rect x="550.0" y="100" width="46.0" height="100" fill="#a7bcdc"/>
+    <rect x="600.0" y="120" width="46.0" height="80" fill="#b9cbe4"/>
+    <rect x="650.0" y="55" width="46.0" height="145" fill="#a7bcdc"/>
+    <rect x="700.0" y="110" width="46.0" height="90" fill="#b9cbe4"/>
+    <rect x="750.0" y="90" width="46.0" height="110" fill="#a7bcdc"/>
+    <rect x="800.0" y="130" width="46.0" height="70" fill="#b9cbe4"/>
+    <rect x="850.0" y="75" width="46.0" height="125" fill="#a7bcdc"/>
+    <rect x="900.0" y="115" width="46.0" height="85" fill="#b9cbe4"/>
+    <rect x="950.0" y="140" width="46.0" height="60" fill="#a7bcdc"/>
+    <rect x="1000.0" y="65" width="46.0" height="135" fill="#b9cbe4"/>
+    <rect x="1050.0" y="105" width="46.0" height="95" fill="#a7bcdc"/>
+    <rect x="1100.0" y="125" width="46.0" height="75" fill="#b9cbe4"/>
+    <rect x="1150.0" y="85" width="46.0" height="115" fill="#a7bcdc"/>
+    <polygon points="560,200 560,90 585,60 610,90 610,200" fill="#8fa8cc"/>
+    <polygon points="620,200 620,90 645,60 670,90 670,200" fill="#8fa8cc"/>
+  </svg>
+</div>
+<div class="ap-tricolor-bar"></div>
 <footer>
   &copy; 2026 Goal2Govt. Find Your Path to Success.
 </footer>
@@ -282,6 +433,7 @@
   </div>
 </div>
 
+<script src="questions-data.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
