@@ -68,6 +68,10 @@
   <p class="section-sub">Access previous year papers, study materials, mock tests and important updates to crack your dream government job.</p>
   <div class="dashboard-grid">
     <div class="dashboard-card" id="card-previous-papers">
+      <div class="dc-lock-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        Sign in required
+      </div>
       <div class="dc-head">
         <div class="dc-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
@@ -91,6 +95,10 @@
     </div>
 
     <div class="dashboard-card" id="card-ebooks">
+      <div class="dc-lock-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        Sign in required
+      </div>
       <div class="dc-head">
         <div class="dc-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
@@ -251,6 +259,7 @@
         <input type="password" id="loginPassword" required autocomplete="current-password">
         <p class="auth-error" id="loginError"></p>
         <button type="submit" class="auth-submit">Log In</button>
+        <button type="button" class="auth-link-btn" id="forgotPasswordLink">Forgot password?</button>
       </form>
 
       <form id="signupForm" class="auth-form" style="display:none;">
@@ -266,7 +275,17 @@
         <button type="submit" class="auth-submit">Create Free Account</button>
       </form>
 
-      <p class="auth-disclaimer">Demo account system — your details are stored only in this browser, not on a server. Don't reuse a real password.</p>
+      <form id="forgotForm" class="auth-form" style="display:none;">
+        <p class="auth-forgot-intro">Enter the email on your account and we'll send you a link to reset your password.</p>
+        <label>Email</label>
+        <input type="email" id="forgotEmail" required autocomplete="email">
+        <p class="auth-error" id="forgotError"></p>
+        <p class="auth-success" id="forgotSuccess"></p>
+        <button type="submit" class="auth-submit">Send Reset Link</button>
+        <button type="button" class="auth-link-btn" id="backToLoginLink">Back to Log In</button>
+      </form>
+
+      <p class="auth-disclaimer">Your password is encrypted and never stored in plain text.</p>
     </div>
   </div>
 </div>
@@ -287,6 +306,7 @@
 </div>
 
 <script src="questions-data.js"></script>
+<script src="papers-data.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

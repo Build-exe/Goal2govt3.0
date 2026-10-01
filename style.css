@@ -106,9 +106,17 @@
   .dashboard-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
   .dashboard-card{
     background:var(--card-bg);border:1px solid var(--border);border-radius:14px;
-    overflow:hidden;display:flex;flex-direction:column;cursor:pointer;
+    overflow:hidden;display:flex;flex-direction:column;cursor:pointer;position:relative;
     transition:box-shadow .2s, transform .2s;
   }
+  .dc-lock-badge{
+    position:absolute;top:14px;right:14px;z-index:2;
+    display:flex;align-items:center;gap:5px;
+    background:rgba(255,255,255,.94);color:var(--blue-dark);
+    font-size:11px;font-weight:700;padding:5px 10px;border-radius:20px;
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+  }
+  .dc-lock-badge svg{width:12px;height:12px;flex:none;}
   .dashboard-card:hover{box-shadow:0 10px 26px rgba(13,59,122,0.14);transform:translateY(-2px);}
   .dc-head{
     background:linear-gradient(120deg,var(--blue-mid),var(--blue-light));
@@ -422,6 +430,24 @@
   }
   .auth-submit:hover{background:var(--blue);}
   .auth-disclaimer{font-size:11px; color:#9aa6b8; margin-top:16px; line-height:1.5; font-style:italic;}
+  .auth-success{color:#1e8e3e; font-size:12.5px; margin-top:10px; min-height:16px;}
+  .auth-forgot-intro{font-size:13px; color:var(--text-mid); margin-bottom:4px; line-height:1.5;}
+  .auth-link-btn{
+    background:none; border:none; color:var(--blue); font-size:13px; font-weight:600;
+    cursor:pointer; margin-top:12px; padding:0; text-align:center; width:100%;
+  }
+  .auth-link-btn:hover{text-decoration:underline;}
+
+  /* Standalone reset-password page */
+  .reset-pw-section{display:flex; justify-content:center; padding:60px 20px 80px;}
+  .reset-pw-card{
+    max-width:420px; width:100%; background:var(--card-bg); border:1px solid var(--border);
+    border-radius:16px; padding:36px 32px; box-shadow:0 10px 30px rgba(13,59,122,0.08);
+  }
+  .reset-pw-card h1{font-size:22px; font-weight:800; color:var(--text-dark); margin-bottom:8px; text-align:center;}
+  .reset-pw-sub{font-size:14px; color:var(--text-mid); text-align:center; margin-bottom:22px;}
+  #resetSuccessBox, #resetInvalidBox{text-align:center;}
+  #resetSuccessBox .get-started, #resetInvalidBox .get-started{margin-top:14px;}
 
   /* ===== Timed exam-taking overlay ===== */
   .exam-sheet{background:#1B1E24 !important;}

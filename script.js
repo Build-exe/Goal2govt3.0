@@ -1945,43 +1945,11 @@ function openCategoryOverview(kind){
 }
 
 /* ============================================================
-   YOUR OWN UPLOADED PAPERS — Google Drive / OneDrive links
-   Add one entry per paper here: { title, url }.
-   Just send me the links and titles and I'll fill this in for
-   you — or edit this array yourself, it's plain JavaScript.
+   YOUR OWN UPLOADED PAPERS & E-BOOKS
+   Moved out to papers-data.js — edit that file to add or
+   remove a question paper or e-book. It defines the same
+   userPapers / userEbooks arrays used below.
    ============================================================ */
-const userPapers = [
- { title: "SSC-CGL-T-I-Similar-Paper-12-Sep-2025-S1-English.pdf", url: "https://drive.google.com/file/d/1z6cl35kcrfTMso-FK4zSuYxVmHI3IFwZ/view?usp=drive_link" },
-   { title: "SSC-CGL-QUESTION-PAPER-13-Aug-2021-Shift-1-English", url: "https://drive.google.com/file/d/1hV2ljDa0cQ3a2d3PXcrbAoELy3eVR3Hb/view?usp=sharing" },
-   { title: "SSC-CGL-Tier-1-Question-Paper-English_09_09_2024", url: "https://drive.google.com/file/d/1oQ0pve3M2Q7E3QplLPaQrVwQYVJXhlTM/view?usp=drive_link" },
-   { title: "SSC-CGL-Tier-1-Question-Paper_14_07_2023", url: "https://drive.google.com/file/d/1RTFsKH_e484xoSb4bzxLnIKmG3gML9ko/view?usp=drive_link" },
-   { title: "RRB-NTPC-CBT-I-Question-Paper_16-03-2026_S1-2", url: "https://drive.google.com/file/d/10CS_4iE9muDNDEI6308GKJWhaMdXtjsB/view?usp=drive_link" },
-   { title: "RRB-NTPC-2025-CBT-I-Question-Paper_16-03-2026_S1-2", url: "https://drive.google.com/file/d/1sepu-w6TBAh5Wa2FrWi-PbnibQDkqhfm/view?usp=drive_link" },
-   { title: "RRB-NTPC-2019-CBT-1-Question-Paper-1", url: "https://drive.google.com/file/d/1rz-8ZhN2V8kJtg2Dw2XElOxG96whdmCZ/view?usp=drive_link" },
-   { title: "RRB-NTPC-2019-CBT-1-Question-Paper-1", url: "https://drive.google.com/file/d/195FMkB-SgoNwae9NEnBjv9LSjH4YEVqa/view?usp=drive_link" },
-   { title: "RRB-NTPC-2019-01_04_2021_-10_30-am-to-12_00-Paper-1", url: "https://drive.google.com/file/d/1CrU4c_Tfm43DBGEeX7qlr-m08uEphWI7/view?usp=drive_link" },
-   { title: "CRPF_Constable_Tech_Tradesman_01July2023_Shift1_QA", url: "https://drive.google.com/file/d/1Y8Em9XBgBxSE4Cbcvddj1mfy77VpgsQr/view?usp=drive_link" },
-   { title: "QP_CAPF_2023_GAI_07082023.pdf", url: "https://drive.google.com/file/d/1kjgq6NWjs_vfndqS4O0eG2jdTMyaXz9-/view?usp=drive_link" },
-   { title: "QP-CAPF-22-GAI-080822.pdf", url: "https://drive.google.com/file/d/1hOeW3K6ftbPgntvjcSq6382sNmDISqtr/view?usp=drive_link" },
-   { title: "QP-CAPF-19-GEA.pdf", url: "https://drive.google.com/file/d/1jbmfpvkSYt4MX58qUKVbCnf-gnmlrX6c/view?usp=drive_link" },
-   { title: "CAPF-2018-GENERAL-ABILITY.pdf", url: "https://drive.google.com/file/d/1oJbMPKBR6pNQhnGSYdqmfc5dAzQwkbz2/view?usp=drive_link" },
-   { title: "cisf ASI paramedical staff Sample paper 1.pdf", url: "https://drive.google.com/file/d/1iJWpbueOp1828r6WJyHpVzI16luZ3fZx/view?usp=drive_link" },
-   { title: "MTS_Havaldar_CBIC_CBN_2024_Shift2_QA.pdf", url: "https://drive.google.com/file/d/1O2lu2vr3ZMdrigY0_I0IOq1gswMauumB/view?usp=drive_link" },
-   { title: "RRB GROUP D SOLVED PAPER 2022 Shift 2.pdf", url: "https://drive.google.com/file/d/13vYwc8ws1eO_nyaJOJiJaggOXsB2VS9d/view?usp=drive_link" },
-   { title: "bsf-head-constable-ministerial-paper-18-jun-2023-shift-2.pdf", url: "https://drive.google.com/file/d/1O65zgeBCfpjfVuPyg7WwNRPMp85nhRaZ/view?usp=drive_link" },
-   { title: "bsf-head-constable-ministerial-paper-18-jun-2023-shift-2 (1).pdf", url: "https://drive.google.com/file/d/1wuFetGQD25eCnSQJotpOTr57rr6NrdH5/view?usp=drive_link" },
-
-];
-
-/* ============================================================
-   YOUR OWN E-BOOKS & GUIDES — Google Drive / OneDrive links
-   Add one entry per e-book here: { title, url }.
-   Same idea as userPapers above — send me links and titles,
-   or edit this array yourself.
-   ============================================================ */
-const userEbooks = [
-  // { title: "General Studies Complete Guide", url: "https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing" },
-];
 
 /* ---------- Shared search-filtered list renderer ---------- */
 function renderSearchableList(panel, items, opts){
@@ -2195,11 +2163,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
   // Previous Year Papers card
   const papersCard = document.getElementById('card-previous-papers');
-  if (papersCard) papersCard.addEventListener('click', openPreviousPapers);
+  if (papersCard) papersCard.addEventListener('click', ()=>{
+    if (!getCurrentUser()){ openAuthModal('login'); return; }
+    openPreviousPapers();
+  });
 
   // E-Books & Guides card
   const ebooksCard = document.getElementById('card-ebooks');
-  if (ebooksCard) ebooksCard.addEventListener('click', openEbooks);
+  if (ebooksCard) ebooksCard.addEventListener('click', ()=>{
+    if (!getCurrentUser()){ openAuthModal('login'); return; }
+    openEbooks();
+  });
 });
 
 try{
@@ -2208,59 +2182,75 @@ try{
 }catch(e){}
 
 /* ============================================================
-   AUTH SYSTEM (client-side demo)
-   Stored only in this browser's localStorage — there is no
-   server or database here, so this is NOT secure real
-   authentication. It's enough to gate a feature per-browser
-   for a static site; a production version would need a real
-   backend to store accounts and verify passwords safely.
+   AUTH SYSTEM — talks to the real backend API (see /backend).
+   The browser only ever holds a signed session token
+   (in localStorage); the server hashes passwords, stores
+   accounts, and verifies logins.
    ============================================================ */
-const AUTH_USERS_KEY = 'g2g_users';
-const AUTH_SESSION_KEY = 'g2g_session';
+const AUTH_TOKEN_KEY = 'g2g_token';
+let currentUser = null; // cached in memory after /api/me resolves
 
-function getUsers(){
-  try{ return JSON.parse(localStorage.getItem(AUTH_USERS_KEY) || '[]'); }
-  catch(e){ return []; }
-}
-function saveUsers(users){
-  try{ localStorage.setItem(AUTH_USERS_KEY, JSON.stringify(users)); }catch(e){}
-}
-function getCurrentUser(){
-  const email = localStorage.getItem(AUTH_SESSION_KEY);
-  if (!email) return null;
-  return getUsers().find(u => u.email.toLowerCase() === email.toLowerCase()) || null;
-}
-function setSession(email){
-  try{ localStorage.setItem(AUTH_SESSION_KEY, email); }catch(e){}
-}
-function clearSession(){
-  try{ localStorage.removeItem(AUTH_SESSION_KEY); }catch(e){}
-}
-// Simple obfuscation only — NOT cryptographic security.
-function obfuscate(str){
-  try{ return btoa(unescape(encodeURIComponent(str))); }catch(e){ return str; }
+function authHeaders(){
+  const token = localStorage.getItem(AUTH_TOKEN_KEY);
+  return token ? { 'Authorization': 'Bearer ' + token } : {};
 }
 
-function signUp(name, email, password){
-  const users = getUsers();
-  if (users.some(u => u.email.toLowerCase() === email.toLowerCase())){
-    return { ok:false, error:'An account with this email already exists — try logging in instead.' };
+async function apiRequest(path, options = {}){
+  let res, data = null;
+  try{
+    res = await fetch(path, {
+      ...options,
+      headers: { 'Content-Type': 'application/json', ...authHeaders(), ...(options.headers || {}) }
+    });
+    try{ data = await res.json(); }catch(e){ data = null; }
+  }catch(networkErr){
+    return { ok:false, error:'Could not reach the server. Please try again.' };
   }
-  users.push({ name: name.trim(), email: email.trim(), passHash: obfuscate(password) });
-  saveUsers(users);
-  setSession(email.trim());
+  if (!res.ok){
+    return { ok:false, error: (data && data.error) || 'Something went wrong. Please try again.' };
+  }
+  return { ok:true, data };
+}
+
+function getCurrentUser(){
+  return currentUser; // synchronous read of the cached session
+}
+
+async function restoreSession(){
+  if (!localStorage.getItem(AUTH_TOKEN_KEY)) return;
+  const res = await apiRequest('/api/me');
+  if (res.ok){
+    currentUser = res.data.user;
+  } else {
+    localStorage.removeItem(AUTH_TOKEN_KEY);
+  }
+  refreshAuthUI();
+}
+
+async function signUp(name, email, password){
+  const res = await apiRequest('/api/signup', {
+    method:'POST',
+    body: JSON.stringify({ name, email, password })
+  });
+  if (!res.ok) return res;
+  localStorage.setItem(AUTH_TOKEN_KEY, res.data.token);
+  currentUser = res.data.user;
   return { ok:true };
 }
-function logIn(email, password){
-  const users = getUsers();
-  const user = users.find(u => u.email.toLowerCase() === email.trim().toLowerCase());
-  if (!user) return { ok:false, error:'No account found with this email. Try signing up.' };
-  if (user.passHash !== obfuscate(password)) return { ok:false, error:'Incorrect password.' };
-  setSession(user.email);
+async function logIn(email, password){
+  const res = await apiRequest('/api/login', {
+    method:'POST',
+    body: JSON.stringify({ email, password })
+  });
+  if (!res.ok) return res;
+  localStorage.setItem(AUTH_TOKEN_KEY, res.data.token);
+  currentUser = res.data.user;
   return { ok:true };
 }
-function logOut(){
-  clearSession();
+async function logOut(){
+  apiRequest('/api/logout', { method:'POST' }); // best-effort; token is discarded client-side regardless
+  localStorage.removeItem(AUTH_TOKEN_KEY);
+  currentUser = null;
   refreshAuthUI();
 }
 
@@ -2272,6 +2262,9 @@ function refreshAuthUI(){
   const mockLocked = document.getElementById('mockLocked');
   const mockUnlocked = document.getElementById('mockUnlocked');
   const mockWelcome = document.getElementById('mockWelcome');
+  const lockBadges = document.querySelectorAll('.dc-lock-badge');
+
+  lockBadges.forEach(b => b.style.display = user ? 'none' : 'flex');
 
   if (user){
     authBtn.textContent = 'Hi, ' + user.name.split(' ')[0] + ' ▾';
@@ -2292,14 +2285,39 @@ function refreshAuthUI(){
 const authOverlay = document.getElementById('authOverlay');
 document.body.appendChild(authOverlay);
 
-function openAuthModal(defaultTab){
+// Switches the modal between the three views: 'login', 'signup', 'forgot'.
+// The tab strip (Log In / Sign Up) only makes sense for the first two, so
+// it's hidden while the forgot-password form is showing.
+function showAuthView(view){
   document.getElementById('loginError').textContent = '';
   document.getElementById('signupError').textContent = '';
+  document.getElementById('forgotError').textContent = '';
+  document.getElementById('forgotSuccess').textContent = '';
+
+  const tabs = document.querySelector('.auth-tabs');
+  const loginForm = document.getElementById('loginForm');
+  const signupForm = document.getElementById('signupForm');
+  const forgotForm = document.getElementById('forgotForm');
+
+  if (view === 'forgot'){
+    tabs.style.display = 'none';
+    loginForm.style.display = 'none';
+    signupForm.style.display = 'none';
+    forgotForm.style.display = 'flex';
+    document.getElementById('forgotEmail').value = document.getElementById('loginEmail').value || '';
+    return;
+  }
+
+  tabs.style.display = 'flex';
+  forgotForm.style.display = 'none';
   document.querySelectorAll('.auth-tab-btn').forEach(b=>b.classList.remove('active'));
-  const tab = defaultTab || 'login';
-  document.querySelector(`.auth-tab-btn[data-authtab="${tab}"]`).classList.add('active');
-  document.getElementById('loginForm').style.display = tab === 'login' ? 'flex' : 'none';
-  document.getElementById('signupForm').style.display = tab === 'signup' ? 'flex' : 'none';
+  document.querySelector(`.auth-tab-btn[data-authtab="${view}"]`).classList.add('active');
+  loginForm.style.display = view === 'login' ? 'flex' : 'none';
+  signupForm.style.display = view === 'signup' ? 'flex' : 'none';
+}
+
+function openAuthModal(defaultTab){
+  showAuthView(defaultTab || 'login');
   authOverlay.classList.add('open');
   lockBackgroundScroll();
 }
@@ -2311,41 +2329,52 @@ document.getElementById('authCloseBtn').addEventListener('click', closeAuthModal
 authOverlay.addEventListener('click', (e)=>{ if (e.target === authOverlay) closeAuthModal(); });
 
 document.querySelectorAll('.auth-tab-btn').forEach(btn=>{
-  btn.addEventListener('click', ()=>{
-    document.querySelectorAll('.auth-tab-btn').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    const tab = btn.dataset.authtab;
-    document.getElementById('loginForm').style.display = tab === 'login' ? 'flex' : 'none';
-    document.getElementById('signupForm').style.display = tab === 'signup' ? 'flex' : 'none';
-  });
+  btn.addEventListener('click', ()=> showAuthView(btn.dataset.authtab));
 });
+document.getElementById('forgotPasswordLink').addEventListener('click', ()=> showAuthView('forgot'));
+document.getElementById('backToLoginLink').addEventListener('click', ()=> showAuthView('login'));
 
-document.getElementById('loginForm').addEventListener('submit', (e)=>{
+document.getElementById('loginForm').addEventListener('submit', async (e)=>{
   e.preventDefault();
   const email = document.getElementById('loginEmail').value;
   const password = document.getElementById('loginPassword').value;
-  const res = logIn(email, password);
   const errEl = document.getElementById('loginError');
-  if (!res.ok){ errEl.textContent = res.error; return; }
   errEl.textContent = '';
+  const res = await logIn(email, password);
+  if (!res.ok){ errEl.textContent = res.error; return; }
   closeAuthModal();
   refreshAuthUI();
 });
 
-document.getElementById('signupForm').addEventListener('submit', (e)=>{
+document.getElementById('signupForm').addEventListener('submit', async (e)=>{
   e.preventDefault();
   const name = document.getElementById('signupName').value;
   const email = document.getElementById('signupEmail').value;
   const password = document.getElementById('signupPassword').value;
   const confirm = document.getElementById('signupConfirm').value;
   const errEl = document.getElementById('signupError');
+  errEl.textContent = '';
   if (password.length < 6){ errEl.textContent = 'Password must be at least 6 characters.'; return; }
   if (password !== confirm){ errEl.textContent = 'Passwords do not match.'; return; }
-  const res = signUp(name, email, password);
+  const res = await signUp(name, email, password);
   if (!res.ok){ errEl.textContent = res.error; return; }
-  errEl.textContent = '';
   closeAuthModal();
   refreshAuthUI();
+});
+
+document.getElementById('forgotForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const email = document.getElementById('forgotEmail').value;
+  const errEl = document.getElementById('forgotError');
+  const okEl = document.getElementById('forgotSuccess');
+  errEl.textContent = '';
+  okEl.textContent = '';
+  const res = await apiRequest('/api/forgot-password', {
+    method:'POST',
+    body: JSON.stringify({ email })
+  });
+  if (!res.ok){ errEl.textContent = res.error; return; }
+  okEl.textContent = "If that email is registered, a reset link is on its way — check your inbox (and spam folder).";
 });
 
 document.getElementById('authBtn').addEventListener('click', ()=>{
@@ -2621,4 +2650,64 @@ examOverlay.addEventListener('click', (e)=>{
   }
 });
 
+/* ============================================================
+   RESET-PASSWORD PAGE (reset-password.html only)
+   Reads ?token=... from the URL and lets the person set a new
+   password. The other pages don't have #resetPasswordForm, so
+   this block simply does nothing on them.
+   ============================================================ */
+(function initResetPasswordPage(){
+  const form = document.getElementById('resetPasswordForm');
+  if (!form) return;
+
+  const intro = document.getElementById('resetIntro');
+  const successBox = document.getElementById('resetSuccessBox');
+  const invalidBox = document.getElementById('resetInvalidBox');
+  const errEl = document.getElementById('resetError');
+
+  const token = new URLSearchParams(window.location.search).get('token');
+  if (!token){
+    intro.style.display = 'none';
+    invalidBox.style.display = 'block';
+    return;
+  }
+  form.style.display = 'flex';
+
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    const password = document.getElementById('resetNewPassword').value;
+    const confirm = document.getElementById('resetConfirmPassword').value;
+    errEl.textContent = '';
+    if (password.length < 6){ errEl.textContent = 'Password must be at least 6 characters.'; return; }
+    if (password !== confirm){ errEl.textContent = 'Passwords do not match.'; return; }
+
+    const res = await apiRequest('/api/reset-password', {
+      method:'POST',
+      body: JSON.stringify({ token, password })
+    });
+
+    if (!res.ok){
+      intro.style.display = 'none';
+      form.style.display = 'none';
+      document.getElementById('resetInvalidMsg').textContent = res.error;
+      invalidBox.style.display = 'block';
+      return;
+    }
+
+    intro.style.display = 'none';
+    form.style.display = 'none';
+    successBox.style.display = 'block';
+  });
+
+  document.getElementById('resetGoToLogin').addEventListener('click', ()=>{
+    window.location.href = 'index.html?openLogin=1';
+  });
+})();
+
+// If redirected here after a successful reset, pop the Log In modal open.
+if (new URLSearchParams(window.location.search).get('openLogin') === '1'){
+  document.addEventListener('DOMContentLoaded', ()=> openAuthModal('login'));
+}
+
 refreshAuthUI();
+restoreSession(); // re-check the session token with the server on page load
