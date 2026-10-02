@@ -1,0 +1,44 @@
+name: Deploy frontend to GitHub Pages
+
+# Publishes only the frontend/ folder (not backend/) to GitHub Pages,
+# every time it changes on main. One-time setup needed in the repo:
+#   Settings -> Pages -> Source -> "GitHub Actions"
+# After that, this runs automatically on every push.
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "frontend/**"
+  workflow_dispatch: # lets you also trigger it manually from the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload frontend/ as the Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "frontend"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
